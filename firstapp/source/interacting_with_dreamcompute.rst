@@ -1,9 +1,22 @@
-How you'll interact with DreamCompute
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+.. only:: libcloud
 
-In this tutorial, you interact with DreamCompute through the SDK that you
-chose in "Choose your OpenStack SDK." This guide assumes that you know how
-to run code snippets in your language of choice.
+    How to authenticate using Python and Apache Libcloud
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. only:: shade
+
+    How to authenticate using Python and OpenStack Shade
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+This tutorial will guide you with step-by-step instructions on how to
+get a basic authentication token on DreamCompute and create a
+connection. This is the most basic step to execute before any other
+task.
+
+You will need to have your username, password and project ID
+available. This information can be easily retrieved from
+`DreamCompute's dashboard, in the openrc file
+<https://dashboard.dreamcompute.com/project/access_and_security/api_access/openrc/>`_.
 
 .. only:: fog
 
@@ -59,9 +72,8 @@ to run code snippets in your language of choice.
         :start-after: step-1
         :end-before: step-2
 
-
-.. note:: Because the tutorial reuses the :code:`conn` object,
-          make sure that you always have one handy.
+This code creates the :code:`conn` object that you can use in the next
+steps.
 
 .. only:: libcloud
 
@@ -70,10 +82,10 @@ to run code snippets in your language of choice.
               credentials with the provider'` exception when you run
               one of these API calls, double-check your credentials.
 
-    .. note:: If your provider does not support regions, try a
-              blank string ('') for the `region_name`.
-
 .. only:: shade
+
+    To try it, add the following code to a Python script (or use an
+    interactive Python shell) by calling :code:`python -i`.
 
     Use your credentials above to specify the cloud provider name,
     user name, password, project_name and region_name in the file
