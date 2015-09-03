@@ -9,6 +9,7 @@ Contents
    :maxdepth: 2
 
    getting_started
+   introduction-to-fractal-app
    what_you_need
    interacting_with_dreamcompute
    flavors_and_images
