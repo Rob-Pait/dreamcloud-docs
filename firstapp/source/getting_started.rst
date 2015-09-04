@@ -14,7 +14,8 @@ What you need
 -------------
 
 This tutorial will guide you with step-by-step instructions on how to
-get a basic authentication token on DreamCompute to a virtual machine. 
+get a basic authentication token on DreamCompute to launching a
+virtual machine.
 
 You will need to have your username, password and project ID
 available. This information can be easily retrieved from
@@ -149,22 +150,6 @@ Authenticate
         :start-after: step-1
         :end-before: step-2
 
-.. only:: libcloud
-
-    To try it, add the following code to a Python script (or use an
-    interactive Python shell) by calling :code:`python -i`.
-
-    Make sure to use your personal username, password and project ID.
-
-    .. literalinclude::  ../samples/libcloud/getting_started.py
-        :start-after: step-1
-        :end-before: step-2
-
-    .. note:: If you receive the
-              :code:`libcloud.common.types.InvalidCredsError: 'Invalid
-              credentials with the provider'` exception when you run
-              one of these API calls, double-check your credentials.
-
 .. only:: shade
 
     To try it, add the following code to a Python script (or use an
@@ -187,14 +172,12 @@ steps.
 Flavors and images
 ~~~~~~~~~~~~~~~~~~
 
-To run your application, you must launch an instance. This instance serves as
-a virtual machine.
-
-To launch an instance, you choose a flavor and an image. The flavor represents
-the size of the instance, including the number of CPUs and amount of RAM and
-disk space. An image is a prepared OS installation from which you clone your
-instance. When you boot instances in a public cloud, larger flavors can be
-more expensive than smaller ones in terms of resources and monetary cost.
+To launch an instance, which is just a virtual machine, you choose
+a flavor and an image. The flavor represents the size of the instance,
+including the number of CPUs and amount of RAM and disk space. An
+image is a prepared OS installation from which you clone your
+instance. When you boot instances in a public cloud, larger flavors
+can be more expensive than smaller ones in terms of monetary cost.
 
 To list the images that are available in your cloud, run some API calls:
 
