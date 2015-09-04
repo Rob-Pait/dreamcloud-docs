@@ -813,3 +813,7 @@ money. Destroy cloud resources to avoid unexpected expenses.
         :end-before: step-9
 
 If you list the instances again, the instance disappears.
+
+What is next?
+`Deploying an application to an instance
+<http://wiki.dreamhost.com/How_to_deploy_an_application_to_an_instance_with_python_libcloud>`_
