@@ -20,7 +20,7 @@ instance:
   instance. Typically, your public key is written to :code:`.ssh/id_rsa.pub`. If
   you do not have an SSH public key file, follow
   `these instructions <https://help.github.com/articles/generating-ssh- keys/>`_ first.
-  We'll cover these instructions in depth in :doc:`/introduction`.
+  We'll cover these instructions in depth in :doc:`/introduction-to-fractal-app`.
 
 .. only:: fog
 
@@ -61,7 +61,7 @@ instance:
 * Network access. DreamCompute has a default security group that will
   work for our purposes. If you want, you can create another security
   group by following along below. This security group allows HTTP
-  and SSH access. We'll go into more detail in :doc:`/introduction`.
+  and SSH access. We'll go into more detail in :doc:`/introduction-to-fractal-app`.
 
 .. only:: fog
 
@@ -90,7 +90,7 @@ instance:
 * User data. During instance creation, you can provide user data to OpenStack to
   configure instances after they boot. The cloud-init service applies the
   user data to an instance. You must pre-install the cloud-init service on your
-  chosen image. We'll go into more detail in :doc:`/introduction`.
+  chosen image. We'll go into more detail in :doc:`/introduction-to-fractal-app`.
 
 .. only:: fog
 
@@ -256,7 +256,7 @@ Next steps
 ~~~~~~~~~~
 
 Don't worry if these concepts are not yet completely clear. In
-:doc:`/introduction`, we explore these concepts in more detail.
+:doc:`/introduction-to-fractal-app`, we explore these concepts in more detail.
 
 * :doc:`/scaling_out`: Learn how to scale your application
 * :doc:`/durability`: Learn how to use Object Storage to make your application durable
@@ -267,7 +267,7 @@ Don't worry if these concepts are not yet completely clear. In
 * :doc:`/advice`: Get advice about operations
 * :doc:`/craziness`: Learn some crazy things that you might not think to do ;)
 
-.. todo:: List the next sections here or simply reference introduction.
+.. todo:: List the next sections here or simply reference introduction-to-fractal-app.
 
 Complete code sample
 ~~~~~~~~~~~~~~~~~~~~
