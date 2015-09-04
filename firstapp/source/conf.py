@@ -299,3 +299,6 @@ pdf_documents = [
     ('index', u'FirstApp', u'FirstApp Documentation',
      u'OpenStack contributors')
 ]
+
+# Don't generate permalinks for the titles
+html_add_permalinks = ""
