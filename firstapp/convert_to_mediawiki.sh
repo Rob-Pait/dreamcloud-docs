@@ -14,31 +14,32 @@ dir="$1"
 # mediawiki. If there isn't, tell the user nothing was done and quit.
 if [ -d "$dir"/html ]; then
 
-    # Make a "mediawiki" directory for the converted files.
-    if `mkdir "$dir"/mediawiki > /dev/null` ; then
-        for file in "$dir"/html/*.html; do
-            dest=`echo $file | sed -- 's/.*\/html\///' | sed 's/.html$/.mediawiki/'`
-
-            # Get the line number where the sidebar starts.
-            lastlinenum=$((`grep -n "<div class=\"sphinxsidebar\"" "$file" | cut -d ':' -f1`-1))
-
-            # Cut everything from the start of the sidebar to the end of the file
-            # out of the file.
-            finalhtml=`cat "$file" | head -n $lastlinenum`
-
-            # Put the html without the sidebar through pandoc so that it can
-            # convert it to mediawiki format.
-            if `echo "$finalhtml" | pandoc -f html -t mediawiki > "${dir}/mediawiki/$dest"` ; then
-                echo "${dir}/mediawiki/$dest"
-            else
-                echo "${dir}/mediawiki/$dest failed to be converted"
-            fi
-        done
-    # Error message if the "mediawiki" directory already exists
-    else
-        echo "$dir/mediawiki already exists, if you want to convert
-the html to mediawiki format, please delete that directory"
+    # Make a "mediawiki" directory for the converted files, if it
+    # already exists, delete it and create it again.
+    if ! `mkdir "$dir"/mediawiki 2> /dev/null` ; then
+        rm -r "$dir"/mediawiki/
+        mkdir "$dir"/mediawiki
     fi
+
+    # Loop through the files and convert html to mediawiki
+    for file in "$dir"/html/*.html; do
+        dest=`echo $file | sed -- 's/.*\/html\///' | sed 's/.html$/.mediawiki/'`
+
+        # Get the line number where the sidebar starts.
+        lastlinenum=$((`grep -n "<div class=\"sphinxsidebar\"" "$file" | cut -d ':' -f1`-1))
+
+        # Cut everything from the start of the sidebar to the end of the file
+        # out of the file.
+        finalhtml=`cat "$file" | head -n $lastlinenum`
+
+        # Put the html without the sidebar through pandoc so that it can
+        # convert it to mediawiki format.
+        if `echo "$finalhtml" | pandoc -f html -t mediawiki > "${dir}/mediawiki/$dest"` ; then
+            echo "${dir}/mediawiki/$dest"
+        else
+            echo "${dir}/mediawiki/$dest failed to be converted"
+        fi
+    done
 
 # Error message if there is no "html" dir in the directory that the
 # user submitted.
