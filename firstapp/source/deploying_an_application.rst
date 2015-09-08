@@ -1,5 +1,14 @@
-Deploy the application to a new instance
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+.. only:: libcloud
+
+    =============================================================================
+    How to deploy an app in an OpenStack instance with Python and Apache Libcloud
+    =============================================================================
+
+.. only:: shade
+
+    ===================================================================
+    How to deploy an app in an OpenStack instance with Python and Shade
+    ===================================================================
 
 Now that you know how to create and destroy instances, you can deploy the
 sample application. The instance that you create for the application is

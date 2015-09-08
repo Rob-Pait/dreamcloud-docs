@@ -1,14 +1,14 @@
 .. only:: libcloud
 
-    =======================================================
-    How to use Python and Apache Libcloud with DreamCompute
-    =======================================================
+    =============================================================================
+    How to launch and delete OpenStack instances using Python and Apache Libcloud
+    =============================================================================
 
 .. only:: shade
 
-    =======================================================
-    How to use Python and OpenStack Shade with DreamCompute
-    =======================================================
+    ===================================================================
+    How to launch and delete OpenStack instances using Python and Shade
+    ===================================================================
 
 What you need
 -------------
