@@ -30,7 +30,7 @@ print image
 
 # step-5
 flavor_id = '100'
-flavor = conn.flavor.get flavor_id
+flavor = conn.flavors.get flavor_id
 print flavor
 
 # step-6
