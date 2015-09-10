@@ -1,3 +1,9 @@
+.. only:: fog
+
+    ===============================================================
+    How to launch and delete OpenStack instances using Ruby and Fog
+    ===============================================================
+
 .. only:: libcloud
 
     =============================================================================
@@ -45,10 +51,6 @@ You must also need to have
       `fog 1.19 or higher installed
       <http://www.fogproject.org/wiki/index.php?title=FOGUserGuide#Installing_FOG>`_
       and working with ruby gems 1.9.
-
-      .. warning::
-
-         This document has not yet been completed for the fog SDK.
 
 .. only:: jclouds
 
@@ -187,6 +189,48 @@ To list the images that are available in your cloud, run some API calls:
         :start-after: step-2
         :end-before: step-3
 
+    This code returns output like this:
+
+    .. code-block:: none
+
+        {"images"=>[{"id"=>"5e1c34f6-4044-4d19-88df-968ab2ca3df6",
+        "links"=>[{"href"=>"https://compute.dream.io:8774/v2/4ad04455f5e6431c895340bf3630e7bb/images/5e1c34f6-4044-4d19-88df-968ab2ca3df6",
+        "rel"=>"self"},
+        {"href"=>"https://compute.dream.io:8774/4ad04455f5e6431c895340bf3630e7bb/images/5e1c34f6-4044-4d19-88df-968ab2ca3df6",
+        "rel"=>"bookmark"},
+        {"href"=>"http://10.64.141.226:9292/4ad04455f5e6431c895340bf3630e7bb/images/5e1c34f6-4044-4d19-88df-968ab2ca3df6",
+        "type"=>"application/vnd.openstack.image", "rel"=>"alternate"}],
+        "name"=>"Debian-8.1"}, {"id"=>"e81771c0-2944-405c-ba92-3deb0e1b4ce3",
+        "links"=>[{"href"=>"https://compute.dream.io:8774/v2/4ad04455f5e6431c895340bf3630e7bb/images/e81771c0-2944-405c-ba92-3deb0e1b4ce3",
+        "rel"=>"self"},
+        {"href"=>"https://compute.dream.io:8774/4ad04455f5e6431c895340bf3630e7bb/images/e81771c0-2944-405c-ba92-3deb0e1b4ce3",
+        "rel"=>"bookmark"},
+        {"href"=>"http://10.64.141.226:9292/4ad04455f5e6431c895340bf3630e7bb/images/e81771c0-2944-405c-ba92-3deb0e1b4ce3",
+        "type"=>"application/vnd.openstack.image", "rel"=>"alternate"}],
+        "name"=>"CentOS-7.0"}, {"id"=>"90d5e049-aaed-4abc-aa75-60c2b1ed6516",
+        "links"=>[{"href"=>"https://compute.dream.io:8774/v2/4ad04455f5e6431c895340bf3630e7bb/images/90d5e049-aaed-4abc-aa75-60c2b1ed6516",
+        "rel"=>"self"},
+        {"href"=>"https://compute.dream.io:8774/4ad04455f5e6431c895340bf3630e7bb/images/90d5e049-aaed-4abc-aa75-60c2b1ed6516",
+        "rel"=>"bookmark"},
+        {"href"=>"http://10.64.141.226:9292/4ad04455f5e6431c895340bf3630e7bb/images/90d5e049-aaed-4abc-aa75-60c2b1ed6516",
+        "type"=>"application/vnd.openstack.image", "rel"=>"alternate"}],
+        "name"=>"Ubuntu-14.04"},
+        {"id"=>"f044ae8f-e0e1-4fb4-baff-0363c19a6638",
+        "links"=>[{"href"=>"https://compute.dream.io:8774/v2/4ad04455f5e6431c895340bf3630e7bb/images/f044ae8f-e0e1-4fb4-baff-0363c19a6638",
+        "rel"=>"self"},
+        {"href"=>"https://compute.dream.io:8774/4ad04455f5e6431c895340bf3630e7bb/images/f044ae8f-e0e1-4fb4-baff-0363c19a6638",
+        "rel"=>"bookmark"},
+        {"href"=>"http://10.64.141.226:9292/4ad04455f5e6431c895340bf3630e7bb/images/f044ae8f-e0e1-4fb4-baff-0363c19a6638",
+        "type"=>"application/vnd.openstack.image", "rel"=>"alternate"}],
+        "name"=>"CoreOS"}, {"id"=>"2827d7cc-8cbb-4ce9-9b61-dadc2436144e",
+        "links"=>[{"href"=>"https://compute.dream.io:8774/v2/4ad04455f5e6431c895340bf3630e7bb/images/2827d7cc-8cbb-4ce9-9b61-dadc2436144e",
+        "rel"=>"self"},
+        {"href"=>"https://compute.dream.io:8774/4ad04455f5e6431c895340bf3630e7bb/images/2827d7cc-8cbb-4ce9-9b61-dadc2436144e",
+        "rel"=>"bookmark"},
+        {"href"=>"http://10.64.141.226:9292/4ad04455f5e6431c895340bf3630e7bb/images/2827d7cc-8cbb-4ce9-9b61-dadc2436144e",
+        "type"=>"application/vnd.openstack.image", "rel"=>"alternate"}],
+        "name"=>"Fedora-20"}
+
 .. only:: libcloud
 
     .. literalinclude:: ../samples/libcloud/getting_started.py
@@ -289,6 +333,44 @@ You can also get information about available flavors using API calls:
     .. literalinclude:: ../samples/fog/getting_started.rb
         :start-after: step-3
         :end-before: step-4
+
+    This code returns output like this:
+
+    .. code-block:: none
+
+        {"flavors"=>[{"id"=>"100",
+        "links"=>[{"href"=>"https://compute.dream.io:8774/v2/4ad04455f5e6431c895340bf3630e7bb/flavors/100",
+        "rel"=>"self"},
+        {"href"=>"https://compute.dream.io:8774/4ad04455f5e6431c895340bf3630e7bb/flavors/100",
+        "rel"=>"bookmark"}], "name"=>"subsonic"}, {"id"=>"200",
+        "links"=>[{"href"=>"https://compute.dream.io:8774/v2/4ad04455f5e6431c895340bf3630e7bb/flavors/200",
+        "rel"=>"self"},
+        {"href"=>"https://compute.dream.io:8774/4ad04455f5e6431c895340bf3630e7bb/flavors/200",
+        "rel"=>"bookmark"}], "name"=>"supersonic"}, {"id"=>"300",
+        "links"=>[{"href"=>"https://compute.dream.io:8774/v2/4ad04455f5e6431c895340bf3630e7bb/flavors/300",
+        "rel"=>"self"},
+        {"href"=>"https://compute.dream.io:8774/4ad04455f5e6431c895340bf3630e7bb/flavors/300",
+        "rel"=>"bookmark"}], "name"=>"lightspeed"}, {"id"=>"400",
+        "links"=>[{"href"=>"https://compute.dream.io:8774/v2/4ad04455f5e6431c895340bf3630e7bb/flavors/400",
+        "rel"=>"self"},
+        {"href"=>"https://compute.dream.io:8774/4ad04455f5e6431c895340bf3630e7bb/flavors/400",
+        "rel"=>"bookmark"}], "name"=>"warpspeed"}, {"id"=>"500",
+        "links"=>[{"href"=>"https://compute.dream.io:8774/v2/4ad04455f5e6431c895340bf3630e7bb/flavors/500",
+        "rel"=>"self"},
+        {"href"=>"https://compute.dream.io:8774/4ad04455f5e6431c895340bf3630e7bb/flavors/500",
+        "rel"=>"bookmark"}], "name"=>"hyperspeed"}, {"id"=>"600",
+        "links"=>[{"href"=>"https://compute.dream.io:8774/v2/4ad04455f5e6431c895340bf3630e7bb/flavors/600",
+        "rel"=>"self"},
+        {"href"=>"https://compute.dream.io:8774/4ad04455f5e6431c895340bf3630e7bb/flavors/600",
+        "rel"=>"bookmark"}], "name"=>"ridiculous"}, {"id"=>"700",
+        "links"=>[{"href"=>"https://compute.dream.io:8774/v2/4ad04455f5e6431c895340bf3630e7bb/flavors/700",
+        "rel"=>"self"},
+        {"href"=>"https://compute.dream.io:8774/4ad04455f5e6431c895340bf3630e7bb/flavors/700",
+        "rel"=>"bookmark"}], "name"=>"ludicrous"}, {"id"=>"800",
+        "links"=>[{"href"=>"https://compute.dream.io:8774/v2/4ad04455f5e6431c895340bf3630e7bb/flavors/800",
+        "rel"=>"self"},
+        {"href"=>"https://compute.dream.io:8774/4ad04455f5e6431c895340bf3630e7bb/flavors/800",
+        "rel"=>"bookmark"}], "name"=>"plaid"}]}
 
 .. only:: libcloud
 
@@ -707,6 +789,54 @@ The newly created instance will look something like:
 
         Instance Id: 4e480ef1-68f0-491f-b237-d9b7f500ef24 at net.openstack.Core.Domain.Link[]
 
+.. only:: fog
+
+    .. code-block:: none
+
+        [  <Fog::Compute::OpenStack::Server
+            id="3dfd7960-a76e-47af-afe1-f40c95d93544",
+            instance_name=nil,
+            addresses={},
+            flavor={"id"=>"100",
+        "links"=>[{"href"=>"https://compute.dream.io:8774/4ad04455f5e6431c895340bf3630e7bb/flavors/100",
+        "rel"=>"bookmark"}]},
+            host_id="a1dc2b7b8b78a71c437e361f8beb2f0c3577891219b319ce2439847b",
+            image={"id"=>"90d5e049-aaed-4abc-aa75-60c2b1ed6516",
+        "links"=>[{"href"=>"https://compute.dream.io:8774/4ad04455f5e6431c895340bf3630e7bb/images/90d5e049-aaed-4abc-aa75-60c2b1ed6516",
+        "rel"=>"bookmark"}]},
+            metadata=    <Fog::Compute::OpenStack::Metadata
+              [
+                      
+              ]
+            >,
+            links=[{"href"=>"https://compute.dream.io:8774/v2/4ad04455f5e6431c895340bf3630e7bb/servers/3dfd7960-a76e-47af-afe1-f40c95d93544",
+        "rel"=>"self"},
+        {"href"=>"https://compute.dream.io:8774/4ad04455f5e6431c895340bf3630e7bb/servers/3dfd7960-a76e-47af-afe1-f40c95d93544",
+        "rel"=>"bookmark"}],
+            name="testinstance",
+            personality=nil,
+            progress=0,
+            accessIPv4="",
+            accessIPv6="",
+            availability_zone="iad-1",
+            user_data_encoded=nil,
+            state="BUILD",
+            created=2015-09-10 17:30:22 UTC,
+            updated=2015-09-10 17:30:28 UTC,
+            tenant_id="4ad04455f5e6431c895340bf3630e7bb",
+            user_id="17949030c6f4400b99f367fc1dc051ea",
+            key_name=nil,
+            fault=nil,
+            config_drive="",
+            os_dcf_disk_config="MANUAL",
+            os_ext_srv_attr_host=nil,
+            os_ext_srv_attr_hypervisor_hostname=nil,
+            os_ext_srv_attr_instance_name=nil,
+            os_ext_sts_power_state=0,
+            os_ext_sts_task_state="spawning",
+            os_ext_sts_vm_state="building"
+          >]
+
 .. only:: shade
 
    .. code-block:: none
@@ -814,6 +944,9 @@ money. Destroy cloud resources to avoid unexpected expenses.
 
 If you list the instances again, the instance disappears.
 
-What is next?
-`Deploying an application to an instance
-<http://wiki.dreamhost.com/How_to_deploy_an_application_to_an_instance_with_python_libcloud>`_
+.. only:: libcloud
+
+    What is next?
+    `Deploying an application to an instance
+    <http://wiki.dreamhost.com/How_to_deploy_an_application_to_an_instance_with_python_libcloud>`_
+
