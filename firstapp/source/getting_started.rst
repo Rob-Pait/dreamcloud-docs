@@ -163,16 +163,14 @@ password and project ID.
 
 .. only:: shade
 
-    You can use an interactive Python shell by calling :code:`python
-    -i` or :code:`ipython`.
-
-    FIXME
-    Use your credentials above to specify the cloud provider name,
-    user name, password, project_name and region_name in the file
-    :file:`~/.config/openstack/clouds.yml`.
+    Create a configuration file to store your user name, password,
+    project_name in :file:`~/.config/openstack/clouds.yml`.
 
     .. literalinclude:: ../samples/shade/clouds.yml
         :language: yaml
+
+    You can use an interactive Python shell by calling :code:`python -i`
+    or :code:`ipython`.
 
     .. literalinclude::  ../samples/shade/getting_started.py
         :start-after: step-1

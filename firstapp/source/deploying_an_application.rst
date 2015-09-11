@@ -82,7 +82,8 @@ instance:
 * Network access. DreamCompute has a default security group that will
   work for our purposes. If you want, you can create another security
   group by following along below. This security group allows HTTP
-  and SSH access. We'll go into more detail in :doc:`/introduction-to-fractal-app`.
+  and SSH access.
+  FIXME We'll go into more detail in :doc:`/introduction-to-fractal-app`.
 
 .. only:: fog
 
@@ -111,7 +112,8 @@ instance:
 * User data. During instance creation, you can provide user data to OpenStack to
   configure instances after they boot. The cloud-init service applies the
   user data to an instance. You must pre-install the cloud-init service on your
-  chosen image. We'll go into more detail in :doc:`/introduction-to-fractal-app`.
+  chosen image. 
+  FIXME We'll go into more detail in :doc:`/introduction-to-fractal-app`.
 
 .. only:: fog
 
@@ -340,5 +342,5 @@ information, the flavor ID, and image ID.
 
 .. only:: shade
 
-    .. literalinclude:: ../samples/libcloud/getting_started.py
+    .. literalinclude:: ../samples/shade/getting_started.py
        :language: python
