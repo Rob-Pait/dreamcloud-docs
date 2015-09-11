@@ -293,23 +293,6 @@ by using your preferred browser.
     :alt: screenshot of the webinterface
     :figclass: align-center
 
-Next steps
-~~~~~~~~~~
-
-Don't worry if these concepts are not yet completely clear. In
-:doc:`/introduction-to-fractal-app`, we explore these concepts in more detail.
-
-* :doc:`/scaling_out`: Learn how to scale your application
-* :doc:`/durability`: Learn how to use Object Storage to make your application durable
-* :doc:`/block_storage`: Migrate the database to block storage, or use
-  the database-as-a-service component
-* :doc:`/orchestration`: Automatically orchestrate your application
-* :doc:`/networking`: Learn about complex networking
-* :doc:`/advice`: Get advice about operations
-* :doc:`/craziness`: Learn some crazy things that you might not think to do ;)
-
-.. todo:: List the next sections here or simply reference introduction-to-fractal-app.
-
 Complete code sample
 ~~~~~~~~~~~~~~~~~~~~
 

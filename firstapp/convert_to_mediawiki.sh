@@ -35,6 +35,7 @@ if [ -d "$dir"/html ]; then
         # Put the html without the sidebar through pandoc so that it can
         # convert it to mediawiki format.
         if `echo "$finalhtml" | pandoc -f html -t mediawiki > "${dir}/mediawiki/$dest"` ; then
+            echo -e "[[Category:DreamCompute]]\n[[Category:Cloud]]" >> "${dir}/mediawiki/$dest"
             echo "${dir}/mediawiki/$dest"
         else
             echo "${dir}/mediawiki/$dest failed to be converted"
