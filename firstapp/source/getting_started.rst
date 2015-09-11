@@ -20,8 +20,8 @@ What you need
 -------------
 
 This tutorial will guide you with step-by-step instructions on how to
-get a basic authentication token on DreamCompute to launching a
-virtual machine.
+get a basic authentication token on DreamCompute and launch a virtual
+machine.
 
 You will need to have your username, password and project ID
 available. This information can be easily retrieved from
@@ -97,7 +97,14 @@ You must also need to have
 Authenticate
 ~~~~~~~~~~~~
 
+Add the following code to a file or copy and paste them in an
+interactive shell, when available. Make sure to use your username,
+password and project ID.
+
 .. only:: fog
+
+    You can use the interactive Ruby shell :code:`irb` to paste the
+    code below:
 
     .. literalinclude:: ../samples/fog/getting_started.rb
         :start-after: step-1
@@ -105,9 +112,8 @@ Authenticate
 
 .. only:: libcloud
 
-    Add the following code to a Python script (or use an
-    interactive Python shell by calling :code:`python -i`) making sure
-    to use your username, password and project ID.
+    You can use an interactive Python shell by calling :code:`python
+    -i` or :code:`ipython`.
 
     .. literalinclude:: ../samples/libcloud/getting_started.py
         :start-after: step-1
@@ -115,7 +121,10 @@ Authenticate
 
 .. only:: openstacksdk
 
-    .. code-block:: python
+     You can use an interactive Python shell by calling :code:`python -i`
+     or :code:`ipython`.
+
+   .. code-block:: python
 
       from openstack import connection
       conn = connection.Connection(auth_url="http://controller:5000/v3",
@@ -154,9 +163,10 @@ Authenticate
 
 .. only:: shade
 
-    To try it, add the following code to a Python script (or use an
-    interactive Python shell) by calling :code:`python -i`.
+    You can use an interactive Python shell by calling :code:`python
+    -i` or :code:`ipython`.
 
+    FIXME
     Use your credentials above to specify the cloud provider name,
     user name, password, project_name and region_name in the file
     :file:`~/.config/openstack/clouds.yml`.
