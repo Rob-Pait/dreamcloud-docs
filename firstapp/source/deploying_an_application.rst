@@ -1,3 +1,9 @@
+.. only:: jclouds
+
+    ===================================================================
+    How to deploy an app in an OpenStack instance with Java and Jclouds
+    ===================================================================
+
 .. only:: fog
 
     ===============================================================
@@ -36,6 +42,12 @@ instance:
   you do not have an SSH public key file, follow
   `these instructions <https://help.github.com/articles/generating-ssh- keys/>`_ first.
   We'll cover these instructions in depth in :doc:`/introduction-to-fractal-app`.
+
+.. only:: jclouds
+
+    .. literalinclude:: ../samples/jclouds/getting_started.java
+        :start-after: step-9
+        :end-before: step-10
 
 .. only:: fog
 
@@ -85,6 +97,12 @@ instance:
   and SSH access.
   FIXME We'll go into more detail in :doc:`/introduction-to-fractal-app`.
 
+.. only:: jclouds
+
+    .. literalinclude:: ../samples/jclouds/getting_started.java
+        :start-after: step-10
+        :end-before: step-11
+
 .. only:: fog
 
     .. literalinclude:: ../samples/fog/getting_started.rb
@@ -112,8 +130,14 @@ instance:
 * User data. During instance creation, you can provide user data to OpenStack to
   configure instances after they boot. The cloud-init service applies the
   user data to an instance. You must pre-install the cloud-init service on your
-  chosen image. 
+  chosen image.
   FIXME We'll go into more detail in :doc:`/introduction-to-fractal-app`.
+
+.. only:: jclouds
+
+    .. code-block:: java
+
+        String userdata = "#!/usr/bin/env bash\ncurl -L -s https://git.openstack.org/cgit/stackforge/faafo/plain/contrib/install.sh | bash -s -- -i faafo -i messaging -r api -r worker -r demo";
 
 .. only:: fog
 
@@ -146,6 +170,12 @@ Boot and configure an instance
 
 Use the image, flavor, key pair, and userdata to create an instance. After you
 request the instance, wait for it to build.
+
+.. only:: jclouds
+
+    .. literalinclude:: ../samples/jclouds/getting_started.java
+        :start-after: step-12
+        :end-before: step-13
 
 .. only:: fog
 
@@ -188,6 +218,19 @@ your instance is provisioned with a publicly rout-able IP address. In this
 case, you'll see an IP address listed under `public_ips` or `private_ips` when
 you list the instances. If not, you must create and attach a floating IP
 address to your instance.
+
+.. only:: jclouds
+
+    .. literalinclude:: ../samples/jclouds/getting_started.java
+        :start-after: step-13
+        :end-before: step-14
+
+    This will get an ip address that you can assign to your instance
+    with:
+
+    .. literalinclude:: ../samples/jclouds/getting_started.java
+        :start-after: step-14
+        :end-before: step-15
 
 .. only:: fog
 
@@ -264,6 +307,11 @@ time. Consider enjoying a cup of coffee while you wait. After the application
 deploys, you can visit the awesome graphic interface at the following link
 by using your preferred browser.
 
+.. only:: jclouds
+
+    .. literalinclude:: ../samples/jclouds/getting_started.java
+        :start-after: step-15
+
 .. only:: fog
 
     .. literalinclude:: ../samples/fog/getting_started.rb
@@ -302,6 +350,11 @@ as a single script.
 
 Before you run this script, confirm that you have set your authentication
 information, the flavor ID, and image ID.
+
+.. only:: jclouds
+
+    .. literalinclude:: ../samples/jclouds/getting_started.java
+       :language: java
 
 .. only:: fog
 
