@@ -955,6 +955,5 @@ If you list the instances again, the instance disappears.
 .. only:: libcloud
 
     What is next?
-    `Deploying an application to an instance
-    <http://wiki.dreamhost.com/How_to_deploy_an_application_to_an_instance_with_python_libcloud>`_
+    Deploying an application to an instance
 
