@@ -60,7 +60,12 @@ You must also need to have
 
 .. only:: jclouds
 
-    `jClouds 1.8 or higher installed <https://jclouds.apache.org/start/install>`_.
+    `jClouds 1.9 or higher installed <https://jclouds.apache.org/start/install>`_.
+
+    Once jclouds and maven are installed, you can install dependencies with
+    \`mvn dependency:copy-dependencies "-DoutputDirectory=./lib"\`, compile the
+    program with \`javac -classpath ".:lib/\*" JCloudsNova.java\`, and run the
+    program with \`java -classpath ".:lib/\*" JCloudsNova\`
 
 .. only:: libcloud
 
@@ -105,7 +110,7 @@ password and project ID.
 
 .. only:: jclouds
 
-    .. literalinclude:: ../samples/jclouds/getting_started.java
+    .. literalinclude:: ../samples/jclouds/JCloudsNova.java
         :start-after: step-1
         :end-before: step-2
 
@@ -201,7 +206,7 @@ To list the images that are available in your cloud, run some API calls:
 
 .. only:: jclouds
 
-    .. literalinclude:: ../samples/jclouds/getting_started.java
+    .. literalinclude:: ../samples/jclouds/JCloudsNova.java
         :start-after: step-2
         :end-before: step-3
 
@@ -367,7 +372,7 @@ You can also get information about available flavors using API calls:
 
 .. only:: jclouds
 
-    .. literalinclude:: ../samples/jclouds/getting_started.java
+    .. literalinclude:: ../samples/jclouds/JCloudsNova.java
         :start-after: step-3
         :end-before: step-4
 
@@ -532,7 +537,7 @@ image that you picked in the previous section:
 
 .. only:: jclouds
 
-    .. literalinclude:: ../samples/jclouds/getting_started.java
+    .. literalinclude:: ../samples/jclouds/JCloudsNova.java
         :start-after: step-4
         :end-before: step-5
 
@@ -618,7 +623,7 @@ Next, choose which flavor you want to use:
 
 .. only:: jclouds
 
-    .. literalinclude:: ../samples/jclouds/getting_started.java
+    .. literalinclude:: ../samples/jclouds/JCloudsNova.java
         :start-after: step-5
         :end-before: step-6
 
@@ -722,7 +727,7 @@ Now you can create the instance:
 
 .. only:: jclouds
 
-    .. literalinclude:: ../samples/jclouds/getting_started.java
+    .. literalinclude:: ../samples/jclouds/JCloudsNova.java
         :start-after: step-6
         :end-before: step-7
 
@@ -792,7 +797,7 @@ there:
 
 .. only:: jclouds
 
-    .. literalinclude:: ../samples/jclouds/getting_started.java
+    .. literalinclude:: ../samples/jclouds/JCloudsNova.java
         :start-after: step-7
         :end-before: step-8
 
@@ -998,7 +1003,7 @@ money. Destroy cloud resources to avoid unexpected expenses.
 
 .. only:: jclouds
 
-    .. literalinclude:: ../samples/jclouds/getting_started.java
+    .. literalinclude:: ../samples/jclouds/JCloudsNova.java
         :start-after: step-8
         :end-before: step-9
 

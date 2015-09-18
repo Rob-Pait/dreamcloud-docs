@@ -45,7 +45,7 @@ instance:
 
 .. only:: jclouds
 
-    .. literalinclude:: ../samples/jclouds/getting_started.java
+    .. literalinclude:: ../samples/jclouds/JCloudsNova.java
         :start-after: step-9
         :end-before: step-10
 
@@ -99,7 +99,7 @@ instance:
 
 .. only:: jclouds
 
-    .. literalinclude:: ../samples/jclouds/getting_started.java
+    .. literalinclude:: ../samples/jclouds/JCloudsNova.java
         :start-after: step-10
         :end-before: step-11
 
@@ -173,7 +173,7 @@ request the instance, wait for it to build.
 
 .. only:: jclouds
 
-    .. literalinclude:: ../samples/jclouds/getting_started.java
+    .. literalinclude:: ../samples/jclouds/JCloudsNova.java
         :start-after: step-12
         :end-before: step-13
 
@@ -221,14 +221,14 @@ address to your instance.
 
 .. only:: jclouds
 
-    .. literalinclude:: ../samples/jclouds/getting_started.java
+    .. literalinclude:: ../samples/jclouds/JCloudsNova.java
         :start-after: step-13
         :end-before: step-14
 
     This will get an ip address that you can assign to your instance
     with:
 
-    .. literalinclude:: ../samples/jclouds/getting_started.java
+    .. literalinclude:: ../samples/jclouds/JCloudsNova.java
         :start-after: step-14
         :end-before: step-15
 
@@ -309,7 +309,7 @@ by using your preferred browser.
 
 .. only:: jclouds
 
-    .. literalinclude:: ../samples/jclouds/getting_started.java
+    .. literalinclude:: ../samples/jclouds/JCloudsNova.java
         :start-after: step-15
 
 .. only:: fog
@@ -353,7 +353,7 @@ information, the flavor ID, and image ID.
 
 .. only:: jclouds
 
-    .. literalinclude:: ../samples/jclouds/getting_started.java
+    .. literalinclude:: ../samples/jclouds/JCloudsNova.java
        :language: java
 
 .. only:: fog
