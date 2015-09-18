@@ -10,12 +10,17 @@ import org.jclouds.openstack.nova.v2_0.domain.Image;
 import org.jclouds.openstack.nova.v2_0.domain.Flavor;
 import org.jclouds.openstack.nova.v2_0.domain.KeyPair;
 import org.jclouds.openstack.nova.v2_0.domain.FloatingIP;
+import org.jclouds.openstack.nova.v2_0.domain.SecurityGroup;
+import org.jclouds.openstack.nova.v2_0.domain.SecurityGroupRule;
+import org.jclouds.openstack.nova.v2_0.domain.Ingress;
 import org.jclouds.openstack.nova.v2_0.extensions.KeyPairApi;
 import org.jclouds.openstack.nova.v2_0.extensions.FloatingIPApi;
+import org.jclouds.openstack.nova.v2_0.extensions.SecurityGroupApi;
 import org.jclouds.openstack.nova.v2_0.features.ServerApi;
 import org.jclouds.openstack.nova.v2_0.features.ImageApi;
 import org.jclouds.openstack.nova.v2_0.features.FlavorApi;
 import org.jclouds.openstack.nova.v2_0.options.CreateServerOptions;
+import org.jclouds.net.domain.IpProtocol;
 
 import java.io.Closeable;
 import java.io.IOException;
@@ -27,6 +32,7 @@ import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
+import java.io.IOException;
 
 public class JCloudsNova implements Closeable {
 
