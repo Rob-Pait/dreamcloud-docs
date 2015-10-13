@@ -22,8 +22,9 @@
     How to launch and delete OpenStack instances using Python and Apache Libcloud
     =============================================================================
 
+=============
 What you need
--------------
+=============
 
 This tutorial will guide you with step-by-step instructions on how to
 get a basic authentication token on DreamCompute and launch a virtual

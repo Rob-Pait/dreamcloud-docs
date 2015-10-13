@@ -166,7 +166,7 @@ instance:
 Now, you can boot and configure the instance.
 
 Boot and configure an instance
-------------------------------
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Use the image, flavor, key pair, and userdata to create an instance. After you
 request the instance, wait for it to build.
@@ -207,7 +207,7 @@ When the instance boots, the `ex_userdata` variable value instructs the
 instance to deploy the Fractals application.
 
 Associate a floating IP for external connectivity
--------------------------------------------------
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 We'll cover networking in detail in :doc:`/networking`.
 
@@ -300,7 +300,7 @@ address to your instance.
 Run the script to start the deployment.
 
 Access the application
-----------------------
+~~~~~~~~~~~~~~~~~~~~~~
 
 Deploying application data and configuration to the instance can take some
 time. Consider enjoying a cup of coffee while you wait. After the application
