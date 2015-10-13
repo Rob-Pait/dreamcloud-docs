@@ -277,7 +277,7 @@ To detach and destroy a volume:
 
     .. code-block:: python
 
-*      snapshot_name = 'test_backup_1'
+        snapshot_name = 'test_backup_1'
         connection.create_volume_snapshot('test', name='test backup 1')
 
     .. todo:: Do we need a note here to mention that 'test' is the
@@ -286,60 +286,3 @@ To detach and destroy a volume:
     You can find information about these calls and more in the
     `libcloud documentation
     <http://ci.apache.org/projects/libcloud/docs/compute/drivers/openstack.html>`_.
-
-Working with the OpenStack Database service
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-You created the database manually above, which is fine for a case with
-a single database you won't touch often like this. However, OpenStack
-also has a component code-named :code:`trove` that provides Database
-as a Service (DBaaS).
-
-.. note:: This OpenStack Database service is not installed in many
-          clouds right now, but if your cloud does support it, it can
-          make your life a lot easier when working with databases.
-
-SDKs don't generally support the service yet, but you can use the
-'trove' commandline client to work with it instead.
-
-Install the trove commandline client by following this guide:
-http://docs.openstack.org/cli-reference/content/install_clients.html
-
-Then set up the necessary variables for your cloud in an :file:`openrc.sh` file
-using this guide:
-http://docs.openstack.org/cli-reference/content/cli_openrc.html
-
-Ensure you have an :file:`openrc.sh` file, source it and then check
-your trove client works: ::
-
-    $ cat openrc.sh
-    export OS_USERNAME=your_auth_username
-    export OS_PASSWORD=your_auth_password
-    export OS_TENANT_NAME=your_project_name
-    export OS_AUTH_URL=http://controller:5000/v2.0
-    export OS_REGION_NAME=your_region_name
-
-    $ source openrc.sh
-
-    $ trove --version
-    1.0.9
-
-From there, you can find a good resource on what is supported and how
-to use in `these slides
-<http://www.slideshare.net/hastexo/hands-on-trove-database-as-a-service-in-openstack-33588994>`_. Steps
-to work with an existing database service installation start on
-slide 28.
-
-
-
-Next Steps
-~~~~~~~~~~
-
-You should now be fairly confident working with Block Storage volumes.
-There are several calls we did not cover. To see these and more, refer
-to the volume documentation of your SDK, or try a different step in
-the tutorial, including:
-
-* :doc:`/orchestration`: to automatically orchestrate the application
-* :doc:`/networking`: to learn about more complex networking
-* :doc:`/advice`: for advice for developers new to operations
