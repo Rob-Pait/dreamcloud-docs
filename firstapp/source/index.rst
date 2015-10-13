@@ -8,10 +8,11 @@ Contents
 .. toctree::
    :maxdepth: 2
 
-   getting_started
-   introduction-to-fractal-app
-   deploying_an_application
    introduction
+   cloud-dev-paradigms
+   getting_started
+   deploying_an_application
+   introduction-to-fractal-app
    scaling_out
    durability
    block_storage
