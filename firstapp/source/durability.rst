@@ -72,6 +72,14 @@ First, let's learn how to connect to the Object Storage endpoint:
 
 .. only:: shade
 
+    First you must install cloudfiles:
+
+    .. code-block:: shell
+
+        $ pip install python-cloudfiles
+
+    Then you can authenticate to DreamObjects
+
     .. literalinclude:: ../samples/shade/durability.py
         :start-after: step-1
         :end-before: step-2
@@ -125,7 +133,8 @@ First, let's learn how to connect to the Object Storage endpoint:
 
 
 To begin to store objects, we must first make a container.
-Call yours :code:`fractals`:
+Call yours :code:`${username}fractals` of course substituting
+${username} with your username:
 
 .. only:: shade
 
@@ -168,7 +177,11 @@ all containers in your account:
 
 The next logical step is to upload an object. Find a photo of a goat
 online, name it :code:`goat.jpg` and upload it to your container
-:code:`fractals`:
+:code:`fractals`. You can do that with the following code:
+
+.. code-block:: shell
+
+    $ wget https://upload.wikimedia.org/wikipedia/commons/b/b2/Hausziege_04.jpg -O goat.jpg
 
 .. only:: shade
 
@@ -272,7 +285,7 @@ So let's now use the knowledge from above to backup the images of the
 Fractals app, stored inside the database right now, on the Object
 Storage.
 
-Use the :code:`fractals`' container from above to put the images in:
+Use the :code:`fractals` container from above to put the images in:
 
 .. only:: shade
 
