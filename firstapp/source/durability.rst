@@ -72,6 +72,12 @@ API.
 
 First, let's learn how to connect to the Object Storage endpoint:
 
+.. only:: shade
+
+    .. literalinclude:: ../samples/shade/durability.py
+        :start-after: step-1
+        :end-before: step-2
+
 .. only:: dotnet
 
     .. warning:: This section has not yet been completed for the .NET SDK.
@@ -123,6 +129,12 @@ First, let's learn how to connect to the Object Storage endpoint:
 To begin to store objects, we must first make a container.
 Call yours :code:`fractals`:
 
+.. only:: shade
+
+    .. literalinclude:: ../samples/shade/durability.py
+        :start-after: step-2
+        :end-before: step-3
+
 .. only:: libcloud
 
     .. literalinclude:: ../samples/libcloud/durability.py
@@ -137,6 +149,12 @@ Call yours :code:`fractals`:
 
 You should now be able to see this container appear in a listing of
 all containers in your account:
+
+.. only:: shade
+
+    .. literalinclude:: ../samples/shade/durability.py
+        :start-after: step-3
+        :end-before: step-4
 
 .. only:: libcloud
 
@@ -154,6 +172,12 @@ The next logical step is to upload an object. Find a photo of a goat
 online, name it :code:`goat.jpg` and upload it to your container
 :code:`fractals`:
 
+.. only:: shade
+
+    .. literalinclude:: ../samples/shade/durability.py
+        :start-after: step-4
+        :end-before: step-5
+
 .. only:: libcloud
 
     .. literalinclude:: ../samples/libcloud/durability.py
@@ -163,6 +187,24 @@ online, name it :code:`goat.jpg` and upload it to your container
 List objects in your container :code:`fractals` to see if the upload
 was successful, then download the file to verify the md5sum is the
 same:
+
+.. only:: shade
+
+    .. literalinclude:: ../samples/shade/durability.py
+        :start-after: step-5
+        :end-before: step-6
+
+.. only:: shade
+
+    .. literalinclude:: ../samples/shade/durability.py
+        :start-after: step-6
+        :end-before: step-7
+
+.. only:: shade
+
+    .. literalinclude:: ../samples/shade/durability.py
+        :start-after: step-7
+        :end-before: step-8
 
 .. only:: libcloud
 
@@ -195,6 +237,18 @@ same:
 
 Finally, let's clean up by deleting our test object:
 
+.. only:: shade
+
+    .. literalinclude:: ../samples/shade/durability.py
+        :start-after: step-8
+        :end-before: step-9
+
+.. only:: shade
+
+    .. literalinclude:: ../samples/shade/durability.py
+        :start-after: step-9
+        :end-before: step-10
+
 .. only:: libcloud
 
     .. literalinclude:: ../samples/libcloud/durability.py
@@ -222,6 +276,12 @@ Storage.
 
 Use the :code:`fractals`' container from above to put the images in:
 
+.. only:: shade
+
+    .. literalinclude:: ../samples/shade/durability.py
+        :start-after: step-10
+        :end-before: step-11
+
 .. only:: libcloud
 
     .. literalinclude:: ../samples/libcloud/durability.py
@@ -230,6 +290,12 @@ Use the :code:`fractals`' container from above to put the images in:
 
 Next, we backup all of our existing fractals from the database to our
 swift container. A simple for loop takes care of that:
+
+.. only:: shade
+
+    .. literalinclude:: ../samples/shade/durability.py
+        :start-after: step-11
+        :end-before: step-12
 
 .. only:: libcloud
 
@@ -247,14 +313,6 @@ swift container. A simple for loop takes care of that:
 
     .. note:: The example code uses the awesome `Requests library <http://docs.python-requests.org/en/latest/>`_. Ensure that it is installed on your system before trying to run the script above.
 
-
-Configure the Fractals app to use Object Storage
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-.. warning:: Currently it is not possible to directly store generated
-             images on the OpenStack Object Storage. Please revisit
-             this section again in the future.
-
 Extra features
 --------------
 
@@ -264,6 +322,12 @@ Delete containers
 One call we didn't cover above that you probably need to know is how
 to delete a container.  Ensure that you have removed all objects from
 the container before running this, otherwise it will fail:
+
+.. only:: shade
+
+    .. literalinclude:: ../samples/shade/durability.py
+        :start-after: step-12
+        :end-before: step-13
 
 .. only:: libcloud
 
@@ -284,6 +348,12 @@ they come, compared to loading the entire file in memory and then sending it.
 This is more efficient, especially for larger files.
 
 
+.. only:: shade
+
+    .. literalinclude:: ../samples/shade/durability.py
+        :start-after: step-13
+        :end-before: step-14
+
 .. only:: libcloud
 
     .. literalinclude:: ../samples/libcloud/durability.py
@@ -292,13 +362,13 @@ This is more efficient, especially for larger files.
 
 .. todo:: It would be nice to have a pointer here to section 9.
 
-Large objects
-~~~~~~~~~~~~~
-
-For efficiency, most Object Storage installations treat large objects
-(say, :code:`> 5GB`) differently than smaller objects.
-
 .. only:: libcloud
+
+    Large objects
+    ~~~~~~~~~~~~~
+
+    For efficiency, most Object Storage installations treat large objects
+    (say, :code:`> 5GB`) differently than smaller objects.
 
     If you are working with large objects, use the
     :code:`ex_multipart_upload_object` call instead of the simpler
@@ -312,21 +382,3 @@ For efficiency, most Object Storage installations treat large objects
         :start-after: step-14
         :end-before: step-15
 
-
-Next steps
-----------
-
-You should now be fairly confident working with Object Storage.
-You can find more about the Object Storage SDK calls at:
-
-.. only:: libcloud
-
-    https://libcloud.readthedocs.org/en/latest/storage/api.html
-
-Or try a different step in the tutorial, including:
-
-* :doc:`/block_storage`: to migrate the database to block storage, or use
-  the database-as-as-service component
-* :doc:`/orchestration`: to automatically orchestrate the application
-* :doc:`/networking`: to learn about more complex networking
-* :doc:`/advice`: for advice for developers new to operations
