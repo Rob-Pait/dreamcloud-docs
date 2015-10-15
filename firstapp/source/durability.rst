@@ -11,9 +11,8 @@ Making it durable
 .. todo:: Large object support in Swift
           http://docs.openstack.org/developer/swift/overview_large_objects.html
 
-This section introduces object storage.  `OpenStack Object Storage
-<http://www.openstack.org/software/openstack-storage/>`_ (code-named
-swift) is open source software for creating redundant, scalable data
+This section introduces object storage.  DreamObjects uses softare
+called Ceph. Ceph is open source software for creating redundant, scalable data
 storage using clusters of standardized servers to store petabytes of
 accessible data.  It is a long-term storage system for large amounts
 of static data that can be retrieved, leveraged, and updated. Access
@@ -56,8 +55,7 @@ a number of reasons.
 
 Because the local filesystem is ephemeral storage, if the instance is
 terminated, the fractal images will be lost along with the
-instance. Block based storage, which we'll discuss in
-:doc:`/block_storage`, avoids that problem, but like local filesystems, it
+instance. Block based storage avoids that problem, but like local filesystems, it
 requires administration to ensure that it does not fill up, and
 immediate attention if disks fail.
 
