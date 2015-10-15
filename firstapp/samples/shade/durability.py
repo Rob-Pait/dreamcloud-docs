@@ -1,5 +1,7 @@
 # step-1
 import cloudfiles
+import random
+import string
 
 username = 'username:swift-username'
 api_key = 'swift-api-key'
@@ -11,7 +13,7 @@ conn = cloudfiles.get_connection(
         )
 
 # step-2
-container_name = 'fractals'
+container_name = ''.join(random.choice(string.lowercase) for i in range(8))
 container = conn.create_container(container_name)
 print(container)
 
@@ -22,7 +24,6 @@ for container in conn.get_all_containers():
 # step-4
 file_path = 'goat.jpg'
 object_name = 'an amazing goat'
-#container = conn.get_container(name=container_name)
 obj = container.create_object(object_name)
 obj.load_from_filename(file_path)
 
@@ -46,7 +47,6 @@ objects = container.get_objects()
 print(objects)
 
 # step-10
-container_name = 'fractals'
 container = conn.get_container(container_name)
 
 # step-11

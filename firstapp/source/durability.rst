@@ -34,10 +34,8 @@ If you think about how you traditionally make what you store durable,
 very quickly you should come to the conclusion that keeping multiple
 copies of your objects on separate systems is a good way to do
 that. However, keeping track of multiple copies of objects is a pain,
-and building that into an app requires a lot of logic. OpenStack
-Object Storage does this automatically for you behind-the-scenes -
-replicating each object at least twice before returning 'write
-success' to your API call. It will always work to ensure that there
+and building that into an app requires a lot of logic. Ceph
+does this automatically for you behind-the-scenes. It will always work to ensure that there
 are three copies of your objects (by default) at all times -
 replicating them around the system in case of hardware failure,
 maintenance, network outage or any other kind of breakage. This is
@@ -133,8 +131,7 @@ First, let's learn how to connect to the Object Storage endpoint:
 
 
 To begin to store objects, we must first make a container.
-Call yours :code:`${username}fractals` of course substituting
-${username} with your username:
+We will generate a random name for it, because it must be unique:
 
 .. only:: shade
 
@@ -176,8 +173,8 @@ all containers in your account:
         [<Container: name=fractals, provider=OpenStack Swift>]
 
 The next logical step is to upload an object. Find a photo of a goat
-online, name it :code:`goat.jpg` and upload it to your container
-:code:`fractals`. You can do that with the following code:
+online, name it :code:`goat.jpg` and upload it to your container.
+You can do that with the following code:
 
 .. code-block:: shell
 
@@ -195,7 +192,7 @@ online, name it :code:`goat.jpg` and upload it to your container
         :start-after: step-4
         :end-before: step-5
 
-List objects in your container :code:`fractals` to see if the upload
+List objects in your container to see if the upload
 was successful, then download the file to verify the md5sum is the
 same:
 
@@ -285,7 +282,7 @@ So let's now use the knowledge from above to backup the images of the
 Fractals app, stored inside the database right now, on the Object
 Storage.
 
-Use the :code:`fractals` container from above to put the images in:
+Use the container from above to put the images in:
 
 .. only:: shade
 
