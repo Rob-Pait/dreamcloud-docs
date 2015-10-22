@@ -25,10 +25,12 @@ end, but it'll be more fun if you follow along with me yourself!
 
 Set Up DreamObjects and Create a Bucket
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-**TODO**
-Yep, go to panel, do it.  Link to wiki.
+Follow
 http://wiki.dreamhost.com/DreamObjects_End_User_Guide#Users
+and
 http://wiki.dreamhost.com/DreamObjects_End_User_Guide#Buckets
+to setup a user and bucket in your DreamObjects account that we will use
+for this tutorial.
 
 Piecing Together the Backup Script
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -64,7 +66,7 @@ Ok, let's get going.  Our script will have four main sections:
 * Clean up
 
 Setup
------
+^^^^^
 This part of the script consists of defining a few variables (yours
 will be different from mine) and making sure everything is ready to
 go for the backup itself.
@@ -90,7 +92,7 @@ website, I'll talk about how to manage that best a bit later
 on.
 
 Create the backup file
-----------------------
+^^^^^^^^^^^^^^^^^^^^^^
 Now it's time for our code to do some actual work.  The backup
 file itself will be something called a "tar file" or  a
 "tarball".  If you're not familiar with it, think of it as
@@ -136,7 +138,7 @@ that backup_filename line works out to (on Thursdays).
 * Then, we define the full path to the backup file.
 
 Upload the backup file to DreamObjects
---------------------------------------
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 Now that we have created a backup file, let's copy it to
 DreamObjects for safe-keeping.  Here's the fun part!
 
@@ -165,7 +167,7 @@ stored locally ("backup_filepath") up to DreamObjects.  And
 we're done!
 
 Clean up
---------
+^^^^^^^^
 At this point, we still have a backup file sitting around on
 our hosting server, where it doesn't belong.  Get rid of it
 like this:
@@ -176,7 +178,7 @@ like this:
     os.remove(backup_filepath)
 
 A few things we missed
-----------------------
+^^^^^^^^^^^^^^^^^^^^^^
 If you've been following along to this point you have almost
 working code, but not quite.  First it assumes it is being
 run from the root of your home directory, second we used a
@@ -207,20 +209,8 @@ In my version I've also added comments to make it easier
 to read and added print statements telling us what step
 it's on to make it more user friendly.
 
-One I Prepared Earlier
-----------------------
-Download link.
-
-In my final version I
-
-Additional comments on what's different (takes target_dir
-from command line to make multiple sites/directories
-easier)
-
-Test it first, then go on to the cron job step.
-
 The Cron Job
-------------
+~~~~~~~~~~~~
 A cron job is just a request to the system to execute a
 specific command on a schedule.  This is very easy to
 set up.
@@ -238,7 +228,7 @@ the instructions on this page to set the Cron Job. Tip: the command
 name will be the command to run your python script.
 
 Next Steps
-----------
+~~~~~~~~~~
 If you've followed all of these steps, your website (or
 websites) will now be automatically backed up to
 DreamObjects daily, but what if you want to do more
