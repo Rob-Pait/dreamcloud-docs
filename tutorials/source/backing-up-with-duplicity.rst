@@ -1,3 +1,7 @@
+===============================================
+Backing up Data to DreamObjects Using Duplicity
+===============================================
+
 I’m setting up backups for a Linux machine in this tutorial. First
 ou will need to setup a plan for DreamObjects; if you already
 have an account with us you can do so from the panel here, otherwise you can
