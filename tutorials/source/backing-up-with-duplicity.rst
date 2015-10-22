@@ -10,7 +10,7 @@ that.
 
 On Ubuntu getting all of the software you need is easy:
 
-.. code-block::
+.. code-block:: bash
 
     sudo apt-get install duplicity python-boto
 
@@ -18,7 +18,7 @@ Now we have to take our user and secret key and put them into a file named
 ‘.boto’ in our users home directory. You can do this with the following
 commands if you substitute your own keys:
 
-.. code-block::
+.. code-block:: bash
 
     echo “[Credentials]” >> ~/.boto
     echo “aws_access_key_id = 98F3n8qUtWEJ6ZdBYyQy” >> ~/.boto
@@ -29,7 +29,7 @@ Now you can backup any directory you desire to a bucket name of your choice. In
 this example I’m backing up my Pictures directory to the blogdemo bucket:
 
 
-.. code-block::
+.. code-block:: bash
 
     duplicity –allow-source-mismatch ~/Pictures \
     s3://objects.dreamhost.com/blogdemo
@@ -37,7 +37,7 @@ this example I’m backing up my Pictures directory to the blogdemo bucket:
 It prompts for a encryption password which you won’t want to forget and then
 syncs your files, the output should look something like this:
 
-.. code-block::
+.. code-block:: bash
 
     GnuPG passphrase:
     Retype passphrase to confirm:
