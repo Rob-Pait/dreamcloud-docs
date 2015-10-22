@@ -65,7 +65,7 @@ The Script
 Name the script anything you like with ".py" at the end.  Then, the very
 first line of your script must be this:
 
-.. code-block::
+.. code-block:: python
 
     #!/usr/bin/python
 
@@ -86,7 +86,7 @@ go for the backup itself.
 
 First,  define some variables we know we'll need later:
 
-.. code-block::
+.. code-block:: python
 
     tmp_dir = 'tmp'
     backup_bucket = 'website-backup'
@@ -111,7 +111,7 @@ file itself will be something called a "tar file" or  a
 "tarball".  If you're not familiar with it, think of it as
 something like a zip file.  Here's our code:
 
-.. code-block::
+.. code-block:: python
 
     import tarfile
 
@@ -126,7 +126,7 @@ close it.  We never actually defined that "backup_filepath"
 variable I've used there, though.  Here's how we can do that
 (this code goes in the script before the tarfile code above):
 
-.. code-block::
+.. code-block:: python
 
     import datetime
     day_number = datetime.datetime.today().weekday()
@@ -157,7 +157,7 @@ DreamObjects for safe-keeping.  Here's the fun part!
 
 First, open a connection to DreamObjects:
 
-.. code-block::
+.. code-block:: python
 
     connection = boto.connect_s3( host='objects.dreamhost.com' )
 
@@ -166,7 +166,7 @@ access key and secret key in our .boto file earlier.
 
 Next, upload the tarfile to DreamObjects:
 
-.. code-block::
+.. code-block:: python
 
     bucket = connection.get_bucket(backup_bucket)
     key = bucket.new_key(backup_filename)
@@ -185,7 +185,7 @@ At this point, we still have a backup file sitting around on
 our hosting server, where it doesn't belong.  Get rid of it
 like this:
 
-.. code-block::
+.. code-block:: python
 
     import os
     os.remove(backup_filepath)
@@ -202,7 +202,7 @@ defined.  We've got code to help with all of that, too!
 This will make sure it's running from your home directory,
 defining our home_dir variable in the process:
 
-.. code-block::
+.. code-block:: python
 
     home_dir = os.getenv('HOME')
     os.chdir(home_dir)
@@ -213,7 +213,7 @@ variable the first time.
 This will create our temp directory for us if it doesn't
 exist already:
 
-.. code-block::
+.. code-block:: python
 
     if not os.path.isdir(tmp_dir):
     os.makedirs(tmp_dir)
