@@ -2,13 +2,7 @@
 Simple Website Backups with DreamObjects
 ========================================
 
-We've talked a lot about the benefits of DreamObjects and a few ways to use it
-for media file storage and computer backups.  We've also talked about
-integrating it into WordPress using the DreamObjects plugin.  Using a little
-bit of programming you can use it for much more than that, though.
-DreamObjects is very simple to integrate into software.  In fact, it's easier
-to use DreamObjects to store and access data than it is to access standard
-files!  In this tutorial I'll walk you through writing a short python script
+In this tutorial I'll walk you through writing a short python script
 that will create a backup of your DreamHost-hosted website and then setting it
 up to run automatically every day.
 
@@ -18,15 +12,6 @@ extend it to do that as well.  Using this, you will have backups that you can
 access yourself at any time if you need to restore a file.  For simplicity I'm
 showing an example of keeping 7 daily backups but this general approach can be
 used for any amount of backups with any schedule you like.
-
-One I Prepared Earlier
-~~~~~~~~~~~~~~~~~~~~~~
-If you're the type of person that likes to jump right in, you can just download
-my version of this script and go town with it.  It's here in github: Download
-link (github?)
-
-My version of the script is a little bit different than what you'll end up with
-if you follow this tutorial and I'll explain how it's different later on.
 
 The Steps
 ~~~~~~~~~
@@ -238,10 +223,19 @@ The Cron Job
 ------------
 A cron job is just a request to the system to execute a
 specific command on a schedule.  This is very easy to
-set up from DreamHost Control Panel.
+set up.
 
-wiki link, with screenshot of mine.    **TODO**
+In order to set up a cronjob on your website you must first
+make a shell user for that site. To do this, open the DreamHost
+web dashboard, go to Users > Manage Users and add a user. Fill
+out the required information and click on the "Shell User"
+radio button. Now copy your script onto the server where your
+website runs.
 
+After those two things are done you can go back to the web
+dashboard and click Goodies > Cron Jobs > Add a New Cron Job. Follow
+the instructions on this page to set the Cron Job. Tip: the command
+name will be the command to run your python script.
 
 Next Steps
 ----------
