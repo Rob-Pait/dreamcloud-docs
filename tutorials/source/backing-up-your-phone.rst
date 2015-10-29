@@ -8,8 +8,11 @@ bucket. For the purposes of this tutorial, we’ll use the freshly created
 
 1
 
-On your Android device, install S3Anywhere (there’s a free trial version of the
-app if you don’t want to pay a few bucks for the Pro version linked here) and
+On your Android device, install `S3Anywhere
+<https://play.google.com/store/apps/details?id=lysesoft.s3anywherepro>`_ (there’s a
+`free trial <https://play.google.com/store/apps/details?id=lysesoft.s3anywhere>`_
+version of theapp if you don’t want to pay a few bucks for the Pro version
+linked here) and
 open it.
 
 2
