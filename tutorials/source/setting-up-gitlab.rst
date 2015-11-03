@@ -9,7 +9,8 @@ instance running. I recommend launching an Ubuntu 14.04 instance, the
 instructions that we will be following may also work for other Debian based
 distros, although I have not tested that. You can spin up an instance using the
 Web UI (the smallest flavor should be fine), I recommend writing a small script
-to do it for you. After the instance is running , give it
+to do it for you, but you can also launch the instance from the web UI. After 
+the instance is running , give it an IP and then proceed.
 
 Installing Gitlab
 -----------------
@@ -17,15 +18,15 @@ Once you have an Ubuntu 14.04 instance running, ssh in with
 
 .. code-block:: shell
 
-    ssh dhc-user@floating ip
+    ssh dhc-user@floatingip
 
-then run
+replacing "floatingip" with the ip address of your instance, then run
 
 .. code-block:: shell
 
     sudo apt-get install curl openssh-server ca-certificates postfix
 
-and follow the instructions to install postfix.
+In the postfix installer, select "Internet site".
 
 .. code-block:: shell
 
@@ -36,7 +37,18 @@ This command curls a url and then runs every command in that url as root. and
 because of this, you should use it with great caution. You should really never
 run that command unless you are 100% confident that the url doesnt have
 anything malitious in it. In this case it is the easiest way to install
-gitlab-ce.
+gitlab-ce. If you are uncomfortable with this method of installation, you can
+go to https://packages.gitlab.com/gitlab/gitlab-ce , click on the version you
+want, copy the url for the download, then run the following commands.
+
+.. code-block:: shell
+
+    curl -LJO $url
+    sudo dpkg -i $debfile
+
+The url should look something like
+https://packages.gitlab.com/gitlab/gitlab-ce/packages/ubuntu/precise/gitlab-ce_8.1.2-ce.0_amd64.deb/download
+and the filename should start with "gitlab-ce" and end with ".deb".
 
 Configuration
 -------------
@@ -44,8 +56,8 @@ Configuration
 
     sudo gitlab-ctl reconfigure
 
-Congrats, you are now running gitlab. Before you run away, login to the web
-page in a browser (using your instances ip as the url), and login with the
+Congrats, you are now running gitlab. The last thing you need to do is login to the web
+page in a browser (using your instance's ip as the url), and login with the
 credentials
 
 Username: root
