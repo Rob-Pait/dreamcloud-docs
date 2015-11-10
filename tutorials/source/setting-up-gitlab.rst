@@ -9,7 +9,7 @@ instance running. I recommend launching an Ubuntu 14.04 instance, the
 instructions that we will be following may also work for other Debian based
 distros, although I have not tested that. You can spin up an instance using the
 Web UI (the smallest flavor should be fine), I recommend writing a small script
-to do it for you, but you can also launch the instance from the web UI. After 
+to do it for you, but you can also launch the instance from the web UI. After
 the instance is running , give it an IP and then proceed.
 
 Installing Gitlab
