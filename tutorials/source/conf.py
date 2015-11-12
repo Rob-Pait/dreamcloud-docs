@@ -47,8 +47,9 @@ master_doc = 'index'
 
 # General information about the project.
 project = u'DreamObjects Docs'
-copyright = u'2015, Caleb Boylan'
-author = u'Caleb Boylan'
+copyright = u'2015, DreamHost'
+#author = u'Caleb Boylan'
+author = u'Dreamhost'
 
 # The version info for the project you're documenting, acts as replacement for
 # |version| and |release|, also used in various other places throughout the
@@ -221,9 +222,15 @@ latex_elements = {
 # Grouping the document tree into LaTeX files. List of tuples
 # (source start file, target name, title,
 #  author, documentclass [howto, manual, or own class]).
+"""
 latex_documents = [
   (master_doc, 'DreamObjectsDocs.tex', u'DreamObjects Docs Documentation',
    u'Caleb Boylan', 'manual'),
+]
+"""
+latex_documents = [
+  (master_doc, 'DreamObjectsDocs.tex', u'DreamObjects Docs Documentation',
+   u'DreamHost', 'manual'),
 ]
 
 # The name of an image file (relative to this directory) to place at the top of
