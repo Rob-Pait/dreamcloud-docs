@@ -1,8 +1,0 @@
-clouds:
-    dreamcompute:
-        auth:
-            username: $YOUR_USERNAME
-            password: $YOUR_PASSWORD
-            project_name: $YOUR_PROJECT
-            auth_url: https://keystone.dream.io/
-        region_name: RegionOne
