@@ -28,3 +28,10 @@ You  need to have python2.7 and beautifulsoup4 installed
 
 The script can then be called using:
 python publish.py html\_to\_be\_published.html $SECTION\_ID
+
+Building the Documentation
+--------------------------
+run `tox` in the repo to build the documentation, the build directories are in
+$category/$section/build.
+For example, the dreamcompute tutorials documentation will be built to
+"dreamcompute/tutorials/build"
