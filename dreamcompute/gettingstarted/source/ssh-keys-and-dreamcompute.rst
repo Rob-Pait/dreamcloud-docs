@@ -19,12 +19,16 @@ There are two parts to an SSH key: a private key and a public key.  The private
 key is known only to you and should be safeguarded.  On unix-based systems such
 as Mac and Linux, the private key is generally stored in:
 
-/home/myuser/.ssh/id_rsa
+.. code-block:: bash
+
+    /home/myuser/.ssh/id_rsa
 
 The public key can be shared with any server that you would like ssh access
 to.  Similarly, the public key will be stored in:
 
-/home/myuser/.ssh/id_rsa.pub
+.. code-block:: bash
+
+    /home/myuser/.ssh/id_rsa.pub
 
 SSH keys generated on Windows systems using the
 `PuTTY <http://www.chiark.greenend.org.uk/~sgtatham/putty/>`_ key generator
@@ -75,35 +79,37 @@ systems.
 
 When run:
 
-STEP 1: Enter a file name to save private key to ('''hit enter for the
-recommended default that you see in parenthesis''').
+STEP 1: Enter a file name to save private key to (**hit enter for the
+recommended default that you see in parenthesis**).
 
 STEP 2: Enter a password (recommended). You can press enter twice to not have
 a password.
 
 The output looks like this:
 
-$ ssh-keygen -t rsa
-Generating public/private rsa key pair.
-Enter file in which to save the key (/home/myuser/.ssh/id_rsa):
-Enter passphrase (empty for no passphrase):
-Enter same passphrase again:
-Your identification has been saved in /home/myuser/.ssh/id_rsa.
-Your public key has been saved in /home/myuser/.ssh/id_rsa.pub.
-The key fingerprint is:
-66:d9:a4:f0:8d:0b:72:93:b8:67:2e:af:f6:91:ce:e3 myuser@mycomputer
-The key's randomart image is:
-+--[ RSA 2048]----+
-|                 |
-|                 |
-|      .   .      |
-|     . + B       |
-|    o = S o      |
-|     + * .       |
-|    . = .        |
-|    o*..         |
-|   ..*E.         |
-+-----------------+
+.. code-block:: bash
+
+    $ ssh-keygen -t rsa
+    Generating public/private rsa key pair.
+    Enter file in which to save the key (/home/myuser/.ssh/id_rsa):
+    Enter passphrase (empty for no passphrase):
+    Enter same passphrase again:
+    Your identification has been saved in /home/myuser/.ssh/id_rsa.
+    Your public key has been saved in /home/myuser/.ssh/id_rsa.pub.
+    The key fingerprint is:
+    66:d9:a4:f0:8d:0b:72:93:b8:67:2e:af:f6:91:ce:e3 myuser@mycomputer
+    The key's randomart image is:
+    +--[ RSA 2048]----+
+    |                 |
+    |                 |
+    |      .   .      |
+    |     . + B       |
+    |    o = S o      |
+    |     + * .       |
+    |    . = .        |
+    |    o*..         |
+    |   ..*E.         |
+    +-----------------+
 
 The final step is to continue to the
 Import an Existing SSH Key section to import the key
@@ -123,8 +129,10 @@ location.
 On Mac and Linux systems, you can check in the above
 described location:
 
-$ ls ~/.ssh/id_rsa*
-/home/myuser/.ssh/id_rsa  /home/myuser/.ssh/id_rsa.pub
+.. code-block:: bash
+
+    $ ls ~/.ssh/id_rsa*
+    /home/myuser/.ssh/id_rsa  /home/myuser/.ssh/id_rsa.pub
 
 Import an Existing SSH key into the Dashboard
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -162,7 +170,7 @@ private key into a .ppk file before it can be used to
 connect via ssh.  To do this, open up the PuTTY Key
 Generator (puttygen.exe), click the Conversions menu
 then "Import Key".  Browse to the folder that contains
-the *.pem file you downloaded from the DreamCompute
+the \*.pem file you downloaded from the DreamCompute
 dashboard, or the private key you created outside the
 Dashboard.  You can give the key a name in the "Key
 comment" field, and when finished click the "Save
@@ -184,27 +192,25 @@ Using Mac & Linux
 On unix based systems, the key will need to setup
 first.  There are several ways to do this:
 
-;Configure as your main key
-:Copy the key or .pem file to your home directory, to
-the ~/.ssh/id_rsa file.
+* Configure as your main key
+    * Copy the key or .pem file to your home directory, to the ~/.ssh/id_rsa file.
 
-;Configure as an alternative key
-:Copy the key or .pem file to a safe place, and then
-edit our ~/.ssh/config file to specify that
-connections to that specific host will use this
-alternate key.
+* Configure as an alternative key
+    * Copy the key or .pem file to a safe place, and then edit our ~/.ssh/config file to specify that connections to that specific host will use this alternate key.
 
-Host IPADDRESS
-IdentityFile ~/path/to/key
+    .. code-block:: bash
+
+        Host IPADDRESS
+        IdentityFile ~/path/to/key
 
 The final step is to connect via ssh:
 
-$ ssh dhc-user@IPADDRESS
-Welcome to Ubuntu 12.04.2 LTS (GNU/Linux
-3.5.0-23-generic x86_64)
-dhc-user@example:~$
+.. code-block:: bash
 
-;No configuration, specifying the key on the
-command line
-:Connect via ssh -i ~/path/to/key
-dhc-user@IPADDRESS
+    $ ssh dhc-user@IPADDRESS
+    Welcome to Ubuntu 12.04.2 LTS (GNU/Linux
+    3.5.0-23-generic x86_64)
+    dhc-user@example:~$
+
+* No configuration, specifying the key on the command line
+    * Connect via ssh -i ~/path/to/key dhc-user@IPADDRESS
