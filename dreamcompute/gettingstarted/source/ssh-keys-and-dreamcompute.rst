@@ -214,3 +214,6 @@ The final step is to connect via ssh:
 
 * No configuration, specifying the key on the command line
     * Connect via ssh -i ~/path/to/key dhc-user@IPADDRESS
+
+.. meta::
+    :labels: ssh key keys ssh-keys

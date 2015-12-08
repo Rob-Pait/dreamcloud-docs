@@ -74,3 +74,6 @@ or
     . TENANTNUM-openrc.sh
 
 Type in your current password when prompted.
+
+.. meta::
+   :labels: DreamCompute password reset
