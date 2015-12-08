@@ -1,17 +1,15 @@
-.. _php2:
-
-AWS SDK for PHP 2 S3 Examples
-=============================
+Sample PHP Code Using DreamObjects S3-compatible API
+====================================================
 
 .. note::
 
-	This library can be obtained in from Amazon as a `zip file <http://pear.amazonwebservices.com/get/aws.zip>`_ or from `github <https://github.com/aws/aws-sdk-php>`_.
-
-	The examples in this guide have been tested against version 2.4.5 obtained from a zip file.
-
-	The AWS SDK for PHP 2 requires PHP 5.3.3+.
-
-	The complete API reference is available on the `Amazon <http://docs.aws.amazon.com/aws-sdk-php-2/latest/class-Aws.S3.S3Client.html>`_ site.
+    This library can be obtained in from Amazon as a `zip file <http://pear.amazonwebservices.com/get/aws.zip>`_
+    or from `github <https://github.com/aws/aws-sdk-php>`_.  The
+    examples in this guide have been tested against version 2.4.5
+    obtained from a zip file. The AWS SDK for PHP 2 requires PHP
+    5.3.3+.  The complete API reference is available on the
+    `Amazon <http://docs.aws.amazon.com/aws-sdk-php-2/latest/class-Aws.S3.S3Client.html>`_
+    site.
 
 Creating a Connection
 ---------------------

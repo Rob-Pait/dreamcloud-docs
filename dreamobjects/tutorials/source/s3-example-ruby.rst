@@ -1,7 +1,5 @@
-.. _ruby:
-
-Ruby S3 Examples
-================
+Sample Ruby Code Using DreamObjects S3-compatible API
+=====================================================
 
 Creating a Connection
 ---------------------

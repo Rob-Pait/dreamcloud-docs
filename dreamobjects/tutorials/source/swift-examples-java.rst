@@ -1,7 +1,5 @@
-.. _java_swift:
-
-Java Swift Examples
-=====================
+Sample Java Code Using DreamObjects OpenStack Swift-compatible API
+==================================================================
 
 Setup
 -----

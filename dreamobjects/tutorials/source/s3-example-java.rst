@@ -1,7 +1,7 @@
 .. _java:
 
-Java S3 Examples
-================
+Sample Java Code Using DreamObjects S3-compatible API
+=====================================================
 
 Setup
 -----

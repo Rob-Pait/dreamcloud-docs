@@ -1,7 +1,5 @@
-.. _ruby_swift:
-
-Ruby Swift Examples
-=====================
+Sample Ruby Code Using DreamObjects OpenStack Swift-compatible API
+==================================================================
 
 Creating a Connection
 ---------------------

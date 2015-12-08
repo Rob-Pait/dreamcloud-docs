@@ -3,8 +3,8 @@
 .. meta::
     :labels: perl example
 
-Perl S3 Examples
-================
+Sample Perl Code Using DreamObjects S3-compatible API
+=====================================================
 
 Creating a Connection
 ---------------------

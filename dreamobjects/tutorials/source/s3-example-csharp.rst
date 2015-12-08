@@ -1,7 +1,7 @@
 .. _csharp:
 
-C# S3 Examples
-==============
+Sample C# Code Using DreamObjects S3-compatible API
+===================================================
 
 Creating a Connection
 ---------------------

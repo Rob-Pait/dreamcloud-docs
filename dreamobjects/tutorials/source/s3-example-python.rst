@@ -1,7 +1,5 @@
-.. _python:
-
-Python S3 Examples
-==================
+Sample Python Code Using DreamObjects S3-compatible API And Boto
+================================================================
 
 Creating a Connection
 ---------------------

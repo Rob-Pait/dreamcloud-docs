@@ -1,5 +1,5 @@
-Swift Authentication
-====================
+Understand DreamObjects Swift-compatible Authentication
+=======================================================
 
 Using the Swift API, authenticated requests need to contain an
 authentication token. The authentication token may be obtained through

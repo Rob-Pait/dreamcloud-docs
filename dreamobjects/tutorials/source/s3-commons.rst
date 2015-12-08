@@ -1,9 +1,6 @@
-==================
-S3 Common Entities
-==================
-
-.. toctree::
-   :maxdepth: -1
+=====================================================
+How To Use DreamObjects S3-compatible Common Entities
+=====================================================
 
 Bucket and Host Name
 --------------------

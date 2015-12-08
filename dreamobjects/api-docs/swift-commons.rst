@@ -1,5 +1,5 @@
-Common Swift Entities
-=====================
+Understand DreamObjects Common Swift-compatible Entities
+========================================================
 
 Response Status
 ---------------

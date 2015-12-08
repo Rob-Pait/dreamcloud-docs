@@ -1,7 +1,5 @@
-.. _python_swift:
-
-Python Swift Examples
-=====================
+Sample Python Code Using DreamObjects OpenStack Swift-compatible API
+====================================================================
 
 Creating a Connection
 ---------------------

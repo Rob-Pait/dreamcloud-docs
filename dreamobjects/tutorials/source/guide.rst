@@ -1,8 +1,8 @@
 .. _guide:
 
-#####################
-Getting Started Guide
-#####################
+###################################################
+Getting Started using DreamObjects object store API
+###################################################
 
 Introduction
 ============
