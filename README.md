@@ -16,9 +16,9 @@ required to understand the documentation:
 Publishing to zendesk
 ---------------------
 Use the publish.py script in the https://github.com/dreamhost/zendesk-publish-script
-Instructions are in that repo
+Instructions are in that repo on how to publish to zendesk
 
-repo to publish to zendesk. Building the Documentation
+Building the Documentation
 --------------------------
 run `tox` in the repo to build the documentation, the build directories are in
 $category/$section/build.
