@@ -1,6 +1,6 @@
-=========================
- Authentication and ACLs
-=========================
+==========================
+S3 Authentication and ACLs
+==========================
 
 Requests to DreamObjects can be either authenticated or unauthenticated.
 DreamObjects assumes unauthenticated requests are sent by an anonymous user.
