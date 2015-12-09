@@ -1,55 +1,56 @@
 dreamobjects/gettingstarted/build/html/what-is-dreamobjects.html:
-  - section_id: 203167008
+  section_id: 203167008
 dreamobjects/gettingstarted/build/html/what-is-dreamspeed.html:
-  - section_id: 203167008
+  section_id: 203167008
 
 dreamobjects/tutorials/build/html/backing-up-with-boto.html:
-  - section_id: 203167018
+  section_id: 203167018
 dreamobjects/tutorials/build/html/backing-up-with-duplicity.html:
-  - section_id: 203167018
+  section_id: 203167018
 dreamobjects/tutorials/build/html/guide.html:
-  - section_id: 203167018
-dreamobjects/tutorials/build/html/s3-authentication.html:
-  - section_id: 203167018
-dreamobjects/tutorials/build/html/s3-bucketops.html:
-  - section_id: 203167018
-dreamobjects/tutorials/build/html/s3-commons.html:
-  - section_id: 203167018
+  section_id: 203167018
 dreamobjects/tutorials/build/html/s3-example-cpp.html:
-  - section_id: 203167018
+  section_id: 203167018
 dreamobjects/tutorials/build/html/s3-example-csharp.html:
-  - section_id: 203167018
+  section_id: 203167018
 dreamobjects/tutorials/build/html/s3-example-java.html:
-  - section_id: 203167018
+  section_id: 203167018
 dreamobjects/tutorials/build/html/s3-example-perl.html:
-  - section_id: 203167018
+  section_id: 203167018
 dreamobjects/tutorials/build/html/s3-example-php2.html:
-  - section_id: 203167018
+  section_id: 203167018
 dreamobjects/tutorials/build/html/s3-example-php.html:
-  - section_id: 203167018
+  section_id: 203167018
 dreamobjects/tutorials/build/html/s3-example-python.html:
-  - section_id: 203167018
+  section_id: 203167018
 dreamobjects/tutorials/build/html/s3-example-ruby.html:
-  - section_id: 203167018
-dreamobjects/tutorials/build/html/s3-objectops.html:
-  - section_id: 203167018
-dreamobjects/tutorials/build/html/s3-serviceops.html:
-  - section_id: 203167018
-dreamobjects/tutorials/build/html/swift-authentication.html:
-  - section_id: 203167018
-dreamobjects/tutorials/build/html/swift-commons.html:
-  - section_id: 203167018
-dreamobjects/tutorials/build/html/swift-containerops.html:
-  - section_id: 203167018
+  section_id: 203167018
 dreamobjects/tutorials/build/html/swift-examples-java.html:
-  - section_id: 203167018
+  section_id: 203167018
 dreamobjects/tutorials/build/html/swift-examples-python.html:
-  - section_id: 203167018
+  section_id: 203167018
 dreamobjects/tutorials/build/html/swift-examples-ruby.html:
-  - section_id: 203167018
-dreamobjects/tutorials/build/html/swift-objectops.html:
-  - section_id: 203167018
-dreamobjects/tutorials/build/html/swift-serviceops.html:
-  - section_id: 203167018
+  section_id: 203167018
 dreamobjects/tutorials/build/html/uploading-screenshots-to-dreamobjects.html:
-  - section_id: 203167018
+  section_id: 203167018
+
+dreamobjects/api-docs/build/html/swift-authentication.html:
+  section_id: 203167028
+dreamobjects/api-docs/build/html/swift-commons.html:
+  section_id: 203167028
+dreamobjects/api-docs/build/html/swift-containerops.html:
+  section_id: 203167028
+dreamobjects/api-docs/build/html/swift-objectops.html:
+  section_id: 203167028
+dreamobjects/api-docs/build/html/swift-serviceops.html:
+  section_id: 203167028
+dreamobjects/api-docs/build/html/s3-authentication.html:
+  section_id: 203167028
+dreamobjects/api-docs/build/html/s3-bucketops.html:
+  section_id: 203167028
+dreamobjects/api-docs/build/html/s3-commons.html:
+  section_id: 203167028
+dreamobjects/api-docs/build/html/s3-objectops.html:
+  section_id: 203167028
+dreamobjects/api-docs/build/html/s3-serviceops.html:
+  section_id: 203167028
