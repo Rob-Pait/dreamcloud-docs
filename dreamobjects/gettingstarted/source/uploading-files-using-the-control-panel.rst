@@ -25,12 +25,12 @@ There are a variety of applications that allows you to upload and manage your da
 .. figure:: images/04_DHO_Panel_Upload.fw.png
 
 4. Drag your files into the Object Browser or click **Select Files** to choose files using the file browser.
-    *If your file is larger than 64MB, you’ll see a warning message that indicates that the file is too large:* 
+    *If your file is larger than 64MB, you’ll see a warning message that indicates that the file is too large:*
 
 .. figure:: images/05_DHO_Panel_Upload.fw.png
 
 5. To copy another file, drag it into the window or click the **Add more files** button at the bottom. 
-    *Your upload progress is shown:* 
+    *Your upload progress is shown:*
 
 .. figure:: images/06_DHO_Panel_Upload.fw.png
 
@@ -40,7 +40,7 @@ There are a variety of applications that allows you to upload and manage your da
 
 6. When finished uploading, click the **Done** button on the bottom right.
 
-    * The file now appears in the Object Viewer.*
+    *The file now appears in the Object Viewer.*
 
 .. figure:: images/08_DHO_Panel_Upload.fw.png
 
