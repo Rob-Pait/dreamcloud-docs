@@ -1,5 +1,3 @@
-.. _guide:
-
 ###################################################
 Getting Started using DreamObjects object store API
 ###################################################
@@ -15,7 +13,7 @@ DreamObjects. The script is implemented in the `Python programming language
 create a user with an S3 key in your DreamObjects account in the DreamHost
 Panel.
 
-You can download :download:`the example script <demo/demo.zip>`, uncompress it,
+You can download `the example script <https://raw.githubusercontent.com/dreamhost/dreamcloud-docs/master/dreamobjects/tutorials/source/demo/demo.py>`_,
 and then run it using the following command:
 
 .. code-block:: sh
