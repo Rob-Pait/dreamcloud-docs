@@ -1,5 +1,3 @@
-.. _csharp:
-
 Sample C# Code Using DreamObjects S3-compatible API
 ===================================================
 
