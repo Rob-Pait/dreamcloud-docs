@@ -5,7 +5,7 @@ How to Use CloudBerry Backup with DreamObjects
 Overview
 ~~~~~~~~
 
-.. figure:: images/Banner cloudberry1.png
+.. figure:: images/Banner_cloudberry1.png
 
 `CloudBerry Backup <http://www.cloudberrylab.com/dreamobjects-tools.aspx>`_ is a Windows program that automates encrypted and compressed data cloud backup. 
 

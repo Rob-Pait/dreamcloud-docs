@@ -181,5 +181,4 @@ Digging Deeper
 ==============
 
 Now that you've walked through this simple guide, you should be ready to dive
-deeper into DreamObjects! Take a look at the :ref:`s3-examples` or the
-:ref:`swift-examples`.
+deeper into DreamObjects! Take a look at the api documentation

@@ -18,7 +18,7 @@ The Steps
 * First, we'll set up a DreamObjects account and a bucket to store the backups.
 * Next, we'll write the python backup script step by step.
 * Finally, we'll add a cron job in the DreamHost Control Panel to make the
-backup script run daily.
+  backup script run daily.
 
 I'll provide a finished version of the script for you to download at the
 end, but it'll be more fun if you follow along with me yourself!
@@ -129,12 +129,12 @@ week previous.  This bit of code defines a name and location for
 the backup file we'll be creating.
 
 * First, we're using the datetime library to figure out what day
-of the week today is, as a number.  Sunday is 0,  Monday is 1,
-Thursday is 4, etc.  We put that number into the "day_number"
-variable.
+  of the week today is, as a number.  Sunday is 0,  Monday is 1,
+  Thursday is 4, etc.  We put that number into the "day_number"
+  variable.
 * Next, we define the file name for our backup file to be
-something like "idallas.com.backup.4.tar.gz".  That's what
-that backup_filename line works out to (on Thursdays).
+  something like "idallas.com.backup.4.tar.gz".  That's what
+  that backup_filename line works out to (on Thursdays).
 * Then, we define the full path to the backup file.
 
 Upload the backup file to DreamObjects

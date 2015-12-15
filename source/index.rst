@@ -9,9 +9,9 @@ Welcome to DreamObjects Docs's documentation!
 Contents:
 
 .. toctree::
-   :maxdepth: 5
+   :glob:
 
-
+   dream*/*/*
 
 Indices and tables
 ==================

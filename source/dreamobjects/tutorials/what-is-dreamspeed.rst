@@ -74,7 +74,7 @@ panel (i.e.,create a bucket, store files, and so on).
 4. At the bottom, toggle the ‘CDN SUPPORT’ option. This enables the checkbox
    titled ‘Use CDN’ to appear at the right of the alias.
 5. Check the ‘Use CDN’ checkbox.
-6. Click the '''Save Settings''' button to save. ''When you return to the DreamObjects page, the green ‘CDN’ icon appears which confirms it’s been configured:''
+6. Click the **Save Settings** button to save. *When you return to the DreamObjects page, the green ‘CDN’ icon appears which confirms it’s been configured:*
     .. figure:: images/03_DreamSpeed_CDN.fw.png
         :alt: CDN icon
 
@@ -97,33 +97,37 @@ DreamObjects bucket to use a CDN:
 4. Update your site to use the DreamSpeed CDN links so that your content is
    delivered from the CDN.
 
-   - By default, the DreamSpeed CDN link will use the following format: <pre>http://<bucket>.objects.cdn.dream.io/<file_name></pre>
+    - By default, the DreamSpeed CDN link will use the following format:
+
+    .. code::
+
+        http://<bucket>.objects.cdn.dream.io/<file_name>
 
 External CSS example
 ^^^^^^^^^^^^^^^^^^^^
 
-;Before-
+**Before-**
 
-<pre>
-<head>
-<link rel="stylesheet" type="text/css" href="mystyle.css">
-</head>
-</pre>
+.. code::
 
-;Using DreamSpeed CDN-
+    <head>
+    <link rel="stylesheet" type="text/css" href="mystyle.css">
+    </head>
 
-<pre>
-<head>
-<link rel="stylesheet" type="text/css"
-href="http://mybucket.objects.cdn.dream.io/mystyle.css">
-</head>
-</pre>
+**Using DreamSpeed CDN-**
+
+.. code::
+
+    <head>
+    <link rel="stylesheet" type="text/css"
+    href="http://mybucket.objects.cdn.dream.io/mystyle.css">
+    </head>
 
 Using your own domain name for accelerated content
 --------------------------------------------------
 
 To use an alias for your domain, enter a name in the 'Domain Alias' field box
-and then click the '''Save Settings''' button when finished.
+and then click the **Save Settings** button when finished.
 
 Using with WordPress
 --------------------
