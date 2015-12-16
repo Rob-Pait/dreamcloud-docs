@@ -1,0 +1,37 @@
+build/html/dreamobjects/gettingstarted/:
+  section_id: 203167008
+  articles:
+    - what-is-dreamobjects.html
+
+build/html/dreamobjects/tutorials/:
+  section_id: 203167018
+  articles:
+    - backing-up-with-boto.html
+    - backing-up-with-duplicity.html
+    - guide.html
+    - s3-example-cpp.html
+    - s3-example-csharp.html
+    - s3-example-java.html
+    - s3-example-perl.html
+    - s3-example-php2.html
+    - s3-example-php.html
+    - s3-example-python.html
+    - s3-example-ruby.html
+    - swift-examples-java.html
+    - swift-examples-python.html
+    - swift-examples-ruby.html
+    - uploading-screenshots-to-dreamobjects.html
+
+build/html/dreamobjects/api-docs/:
+  section_id: 203167028
+  articles:
+    - swift-authentication.html
+    - swift-commons.html
+    - swift-containerops.html
+    - swift-objectops.html
+    - swift-serviceops.html
+    - s3-authentication.html
+    - s3-bucketops.html
+    - s3-commons.html
+    - s3-objectops.html
+    - s3-serviceops.html

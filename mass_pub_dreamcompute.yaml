@@ -1,0 +1,6 @@
+build/html/dreamcompute/gettingstarted/:
+  section_id: 203141767
+  articles:
+    - password-reset.html
+    - ssh-keys-and-dreamcompute.html
+    - what-is-dreamcompute.html
