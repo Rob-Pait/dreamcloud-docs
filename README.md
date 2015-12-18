@@ -7,11 +7,13 @@ The documentation is organized by product and level of knowledge
 required to understand the documentation:
 
  - dreamcompute
-   - getstarted
+   - gettingstarted
    - tutorials
+   - api-docs
  - dreamobjects
-   - getstarted
+   - gettingstarted
    - tutorials
+   - api-docs
 
 Publishing to zendesk
 ---------------------
@@ -21,6 +23,6 @@ Instructions are in that repo on how to publish to zendesk
 Building the Documentation
 --------------------------
 run `tox` in the repo to build the documentation, the build directories are in
-$category/$section/build.
+build/html/$category/$section/$article
 For example, the dreamcompute tutorials documentation will be built to
-"dreamcompute/tutorials/build"
+"build/html/dreamcompute/tutorials/"
