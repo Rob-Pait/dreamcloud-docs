@@ -4,3 +4,16 @@ build/html/dreamcompute/gettingstarted/:
     - password-reset.html
     - ssh-keys-and-dreamcompute.html
     - what-is-dreamcompute.html
+
+build/html/dreamcompute/tutorials/:
+  section_id: 203167038
+  articles:
+    - configure-apache-on-debian-or-ubuntu.html
+    - configure-apache-on-fedora-or-centos.html
+    - configure-lamp-on-debian-or-ubuntu.html
+    - configure-lamp-on-fedora-or-centos.html
+    - configure-mysql-on-debian-or-ubuntu.html
+    - configure-php-on-debian-or-ubuntu.html
+    - configure-php-on-fedora-or-centos.html
+    - jump-host.html
+    - load-balancing-with-haproxy.html
