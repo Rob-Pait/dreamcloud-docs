@@ -20,7 +20,7 @@ Connecting with Arq
 
 .. figure:: images/Arq-1.fw.png
 
-2. Select ‘DreamObjects’ from the drop down list and then click **Continue**.
+2. Select 'DreamObjects' from the drop down list and then click **Continue**.
     *The DreamObjects access key and secret key request page opens:*
 
 .. figure:: images/Arq-2.fw.png

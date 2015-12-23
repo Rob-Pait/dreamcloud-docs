@@ -7,9 +7,14 @@ Overview
 
 .. figure:: images/duplicati.png
 
-`Duplicati <http://www.duplicati.com/home>`_ is a free backup client that securely stores encrypted, incremental, compressed backups on cloud-storage services and remote-file servers. It works with Linux, Mac, and Windows.
+`Duplicati <http://www.duplicati.com/home>`_ is a free backup client that
+securely stores encrypted, incremental, compressed backups on cloud-storage
+services and remote-file servers. It works with Linux, Mac, and Windows.
 
-Duplicati has built-in AES-256 encryption and backups can be signed using GNU Privacy Guard. A built-in scheduler ensures that backups are always up-to-date. The Duplicati project was inspired by `duplicity <http://duplicity.nongnu.org>`_, and while similar, they are not compatible.
+Duplicati has built-in AES-256 encryption and backups can be signed using GNU
+Privacy Guard. A built-in scheduler ensures that backups are always
+up-to-date. The Duplicati project was inspired by `duplicity
+<http://duplicity.nongnu.org>`_, and while similar, they are not compatible.
 
 Setting up Duplicati with DreamObjects
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -27,26 +32,32 @@ Setting up Duplicati with DreamObjects
 
     .. figure:: images/03_Duplicati.fw.png
 
-4. Select which type of files you wish to back up, and then click the **Next** button. 
+4. Select which type of files you wish to back up, and then click the **Next**
+   button.
 
     .. figure:: images/04_Duplicati.fw.png
 
 5. Enter the following:
-    * **Protect the backups with this password** – This is optional but recommended
+    * **Protect the backups with this password** - This is optional but
+      recommended
     * **Encryption method** – Select AES 256
-    * **Use these settings on new backups** – Check this box to enable these settings for future backups
+    * **Use these settings on new backups** - Check this box to enable these
+      settings for future backups
 
 6. Click the **Next** button.
 
     .. figure:: images/05_Duplicati.fw.png
 
-7. Select the ‘Amazon S3 based’ radio button, and then click the **Next** button.
+7. Select the 'Amazon S3 based' radio button, and then click the **Next**
+   button.
 
     .. figure:: images/06_Duplicati.fw.png
 
 8. Enter the following required DreamObjects credentials:
     * **S3 Servername** – objects.dreamhost.com
-    * **AWS Access ID and Secret Key** – Visit the [[DreamObjects_End_User_Guide#Keys|DreamObjects keys]] article for further details
+    * **AWS Access ID and Secret Key** – Visit the
+      [[DreamObjects_End_User_Guide#Keys|DreamObjects keys]] article for
+      further details
     * **S3 Bucket name** – The name of your DreamObjects bucket
 
 9. Click the **Next** button.
