@@ -2,23 +2,33 @@
 How to Configure LAMP on DreamCompute running Debian or Ubuntu
 ==============================================================
 
-LAMP (Linux, Apache, MySQL, PHP) stacks are a popular way to create web service solutions that offer consistent tools and capabilities between multiple systems.  DreamHost shared, VPS and dedicated hosting services are based on these same services, and you can use it for your DreamCompute instance as well.  These instructions assume you run a Debian- or Ubuntu-based system as they have their own specific configuration and file hierarchy.
+LAMP (Linux, Apache, MySQL, PHP) stacks are a popular way to create web
+service solutions that offer consistent tools and capabilities between
+multiple systems.  DreamHost shared, VPS and dedicated hosting services are
+based on these same services, and you can use it for your DreamCompute
+instance as well.  These instructions assume you run a Debian- or Ubuntu-based
+system as they have their own specific configuration and file hierarchy.
 
 Setup Methods
 ~~~~~~~~~~~~~
 
-There are several ways to setup a LAMP stack on your DreamCompute instance, from the very manual to the very automated.  We will detail some methods below.
+There are several ways to setup a LAMP stack on your DreamCompute instance,
+from the very manual to the very automated.  We will detail some methods
+below.
 
 Automated (Ubuntu only)
 -----------------------
 
-The fastest method is to simply tell Ubuntu to install the "task" named lamp-server.  This is accomplished with apt-get and making sure to use a caret (^) at the end of the name of the task.
+The fastest method is to simply tell Ubuntu to install the "task" named
+lamp-server.  This is accomplished with apt-get and making sure to use a caret
+(^) at the end of the name of the task.
 
 .. code::
 
     sudo apt-get install lamp-server^
 
-The install process asks you to confirm if you wish to install all packages needed for this task.  Confirm by entering "**y**" and hitting enter.
+The install process asks you to confirm if you wish to install all packages
+needed for this task.  Confirm by entering "**y**" and hitting enter.
 
 .. code::
 
@@ -34,9 +44,13 @@ The install process asks you to confirm if you wish to install all packages need
     After this operation, 123 MB of additional disk space will be used.
     Do you want to continue? [Y/n]
 
-During this process, the mysql-server installation will ask you to enter and confirm a root password for MySQL.  It is recommended to provide one.  When this is complete, please refer to the **Configuration** section of this page for details on each of these installed packages.
+During this process, the mysql-server installation will ask you to enter and
+confirm a root password for MySQL.  It is recommended to provide one.  When
+this is complete, please refer to the **Configuration** section of this page
+for details on each of these installed packages.
 
-Troubleshooting: If you get a huge amount of 404 File not found errors during this process, run the following:
+Troubleshooting: If you get a huge amount of 404 File not found errors during
+this process, run the following:
 
 .. code::
 
@@ -47,18 +61,23 @@ Then rerun these instructions from the top
 Manual Installation
 -------------------
 
-To manually install all the needed packages, you can run the following command:
+To manually install all the needed packages, you can run the following
+command:
 
 .. code::
 
     sudo apt-get install apache2 mysql-server php5-cli libapache2-mod-php5 php5-mysqlnd
 
-During this process, the mysql-server installation will ask you to enter and confirm a root password for MySQL.  It is recommended to provide one.  When this is complete, please refer to the **Configuration** section of this page for details on each of these installed packages.
+During this process, the mysql-server installation will ask you to enter and
+confirm a root password for MySQL.  It is recommended to provide one.  When
+this is complete, please refer to the **Configuration** section of this page
+for details on each of these installed packages.
 
 Configuration
 ~~~~~~~~~~~~~
 
-The below links contain details on the configuration of each part of the newly installed LAMP stack.
+The below links contain details on the configuration of each part of the newly
+installed LAMP stack.
 
 `Apache Directories and Main Configuration Files`_
 
