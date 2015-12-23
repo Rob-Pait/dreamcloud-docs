@@ -23,9 +23,9 @@ build/html/dreamobjects/tutorials/:
     - s3-example-java.html
     - s3-example-perl.html
     - s3-example-php2.html
-    - s3-example-php.html
     - s3-example-python.html
     - s3-example-ruby.html
+    - swift-commons.html
     - swift-examples-java.html
     - swift-examples-python.html
     - swift-examples-ruby.html
@@ -39,11 +39,9 @@ build/html/dreamobjects/api-docs/:
     - s3-acl.html
     - s3-authentication.html
     - s3-bucketops.html
-    - s3-commons.html
     - s3-objectops.html
     - s3-serviceops.html
     - swift-authentication.html
-    - swift-commons.html
     - swift-containerops.html
     - swift-objectops.html
     - swift-serviceops.html
