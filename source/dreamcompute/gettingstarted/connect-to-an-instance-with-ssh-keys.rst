@@ -46,10 +46,13 @@ On unix based systems, the key will need to setup
 first.  There are several ways to do this:
 
 * Configure as your main key
-    * Copy the key or .pem file to your home directory, to the ~/.ssh/id_rsa file.
+    * Copy the key or .pem file to your home directory, to the ~/.ssh/id_rsa
+      file.
 
 * Configure as an alternative key
-    * Copy the key or .pem file to a safe place, and then edit our ~/.ssh/config file to specify that connections to that specific host will use this alternate key.
+    * Copy the key or .pem file to a safe place, and then edit our
+      ~/.ssh/config file to specify that connections to that specific host
+      will use this alternate key.
 
     .. code-block:: bash
 

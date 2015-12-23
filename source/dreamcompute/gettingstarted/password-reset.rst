@@ -7,9 +7,11 @@ DreamHost Control Panel
 
 It's easy to reset your DreamCompute password in the DreamHost Control Panel.
 
-* Go to the `DreamCompute <https://panel.dreamhost.com/dreamcompute>`_ page in the control panel.
+* Go to the `DreamCompute <https://panel.dreamhost.com/dreamcompute>`_ page in
+  the control panel.
 * Click the "Login Details" button and then the "Reset My Password" button.
-* Your new password will be displayed at the top of the page. Please note that a may take a few minutes for the change to take affect.
+* Your new password will be displayed at the top of the page. Please note that
+  a may take a few minutes for the change to take affect.
 
 .. figure:: images/DreamCompute-reset-password.png
 
@@ -17,18 +19,19 @@ DreamCompute Dashboard
 ~~~~~~~~~~~~~~~~~~~~~~
 
 You can change your password using the DreamCompute dashboard. Go to the
-`Change Password <https://dashboard.dreamcompute.com/settings/password/>`_ page,
-enter your current password and your new password.
+`Change Password <https://dashboard.dreamcompute.com/settings/password/>`_
+page, enter your current password and your new password.
 
 .. figure:: images/DHC-change-password.png
 
 Use Keystone Client to Reset Your Password
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-DreamCompute utilizes the `Keystone <http://docs.openstack.org/developer/keystone/>`_
-component of OpenStack for authentication and identity management.
-You can reset your password using the Keystone
-`API client <http://docs.openstack.org/api/quick-start/content/>`_.
+DreamCompute utilizes the `Keystone
+<http://docs.openstack.org/developer/keystone/>`_ component of OpenStack for
+authentication and identity management. You can reset your password using the
+Keystone `API client
+<http://docs.openstack.org/api/quick-start/content/>`_.
 
 You can use the Keystone command-line client to change your password. This
 assumes you already have the OS_PASSWORD variable set via the OpenStack RC
@@ -39,9 +42,9 @@ file.
     keystone password-update --new-password  <new-password>
 
 **Don't have the Keystone client?** The
-`OpenStack wiki <http://docs.openstack.org/user-guide/content/install_clients.html>`_
-has good instructions for installing it (and the rest of the clients).
-
+`OpenStack wiki
+<http://docs.openstack.org/user-guide/content/install_clients.html>`_ has good
+instructions for installing it (and the rest of the clients).
 
 API Access
 ~~~~~~~~~~

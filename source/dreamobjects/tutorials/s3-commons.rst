@@ -4,18 +4,22 @@ How To Use DreamObjects S3-compatible Common Entities
 
 Bucket and Host Name
 --------------------
-There are two different modes of accessing the buckets. The first (preferred) method
-identifies the bucket as the top-level directory in the URI. ::
+There are two different modes of accessing the buckets. The first (preferred)
+method identifies the bucket as the top-level directory in the URI. ::
 
 	GET /mybucket HTTP/1.1
 	Host: objects.dreamhost.com
 
-The second method identifies the bucket via a virtual bucket host name. For example::
+The second method identifies the bucket via a virtual bucket host name. For
+example::
 
 	GET / HTTP/1.1
 	Host: mybucket.objects.dreamhost.com
 
-.. tip:: We prefer the first method, because the second method requires expensive domain certification and DNS wild cards.
+.. tip::
+
+    We prefer the first method, because the second method requires
+    expensive domain certification and DNS wild cards.
 
 Common Request Headers
 ----------------------
