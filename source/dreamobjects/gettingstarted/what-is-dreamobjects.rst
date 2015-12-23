@@ -32,16 +32,19 @@ DreamObjects may resemble an FTP system, some details are very different:
 Why the bucket names have to be unique
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Objects stored DreamObjects are identified by a URI that looks like:
+Objects stored DreamObjects are identified by a URL that looks like:
 
    `https://$BUCKET_NAME.objects.dreamhost.com/$OBJECT_NAME`
 
-Since the bucket name is part of the URL, they have to be unique or the
-SSL certificate wouldn't work. This means that creating a new bucket requires
-creativity.
+Since the bucket name is part of the host name in the URL and host names must be
+unique, the bucket name also must be unique. For example, if a bucket called
+"my-bucket" would have the URL:
 
-The easiest way to create a new bucket is to assign a random name and
-create a domain alias for it using `DreamHost Control Panel`_.
+   `https://my-bucket.objects.dreamhost.com`
+
+This means that there can only be **one** bucket called "my-bucket" on
+DreamObjects. Therefore, the easiest way to create a new bucket is to assign a
+random name and create a domain alias for it using `DreamHost Control Panel`_.
 
 .. _DreamHost Control Panel: https://panel.dreamhost.com/index.cgi?tree=cloud.objects
 .. _Wikipedia Object Storage page: https://en.wikipedia.org/wiki/Object_storage
