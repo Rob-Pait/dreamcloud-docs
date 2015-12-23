@@ -7,6 +7,12 @@ Knowledge base.
 
 The labels are grouped in a lax onthology. Feel free to add labels/tags here as you see fit.
 
+To apply them, append this to .rst file:
+
+  .. meta::
+    :labels: $LABEL1 $LABEL2 $MORELABELS
+
+
 Programming languages
 ~~~~~~~~~~~~~~~~~~~~~
 java
@@ -53,3 +59,48 @@ bsd
 freebsd
 openbsd
 coreos
+ios
+android
+
+Clients
+~~~~~~~
+browser
+firefox
+chrome
+safari
+desktop
+mobile
+
+Actions
+~~~~~~~
+upload
+download
+boot
+reboot
+resize
+move
+rename
+authentication
+
+Product-specific components
+~~~~~~~~~~~~~~~~~~~~~~~~~~~
+bucket
+ACL
+object
+ceph
+swift
+S3
+nova
+glance
+keystone
+akanda
+neutron
+network
+dashboard
+horizon
+
+Other topics
+~~~~~~~~~~~~
+
+quota
+billing

@@ -49,3 +49,6 @@ There are a variety of applications that allows you to upload and manage your da
 .. figure:: images/09_DHO_Panel_Upload.fw.png
 
 8. To close the DreamObjects view window when you're done, click the grey **X** in the upper right corner. 
+
+.. meta::
+    :labels: firefox chrome safari browser desktop upload download

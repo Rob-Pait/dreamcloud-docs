@@ -32,3 +32,6 @@ To cancel DreamObjects:
 .. figure:: images/01_DHO_Account_Management.fw.png
 
 * Click the **Cancel DreamObjects** button at the bottom of the page. You are then guided through canceling DreamObjects process.
+
+.. meta::
+    :labels: billing quota
