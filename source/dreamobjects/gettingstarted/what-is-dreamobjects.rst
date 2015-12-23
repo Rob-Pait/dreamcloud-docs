@@ -21,13 +21,13 @@ DreamObjects can be used is used for diverse purposes such as storing photos,
 songs, documents, backups and more without worrying of filling up a disk. While
 DreamObjects may resemble an FTP system, some details are very different:
 
- - files (objects) stored in DreamObjects have a unique identifier in the form
-   of URI.
- - objects have metadata attached to describe what the object is, who created
-   it, who has access to it, for how long and more. These look like the
-   permissions in the FTP directories but they're more powerful and extensible.
- - there are no real directories in DreamObjects: the `buckets` are names
-   assigned to a common space and are part of the object's URI.
+- files (objects) stored in DreamObjects have a unique identifier in the form
+  of URI.
+- objects have metadata attached to describe what the object is, who created
+  it, who has access to it, for how long and more. These look like the
+  permissions in the FTP directories but they're more powerful and extensible.
+- there are no real directories in DreamObjects: the `buckets` are names
+  assigned to a common space and are part of the object's URI.
 
 Why the bucket names have to be unique
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
