@@ -3,12 +3,13 @@
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
-Welcome to DreamObjects Docs's documentation!
-=============================================
+Welcome to DreamCloud's documentation!
+======================================
 
 Contents:
 
 .. toctree::
+   :maxdepth: 1
    :glob:
 
    dream*/*/*
