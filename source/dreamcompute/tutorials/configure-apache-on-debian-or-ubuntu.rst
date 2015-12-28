@@ -31,11 +31,13 @@ To install Apache on your system, run the following commands:
     Building dependency tree
     Reading state information... Done
     The following extra packages will be installed:
-    apache2-mpm-worker apache2-utils apache2.2-bin apache2.2-common libapr1 libaprutil1 libaprutil1-dbd-sqlite3 libaprutil1-ldap ssl-cert
+    apache2-mpm-worker apache2-utils apache2.2-bin apache2.2-common
+    libapr1 libaprutil1 libaprutil1-dbd-sqlite3 libaprutil1-ldap ssl-cert
     Suggested packages:
     apache2-doc apache2-suexec apache2-suexec-custom openssl-blacklist
     The following NEW packages will be installed:
-    apache2 apache2-mpm-worker apache2-utils apache2.2-bin apache2.2-common libapr1 libaprutil1 libaprutil1-dbd-sqlite3 libaprutil1-ldap ssl-cert
+    apache2 apache2-mpm-worker apache2-utils apache2.2-bin apache2.2-common
+    libapr1 libaprutil1 libaprutil1-dbd-sqlite3 libaprutil1-ldap ssl-cert
     0 upgraded, 10 newly installed, 0 to remove and 0 not upgraded.
     Need to get 1,487 kB of archives.
     After this operation, 5,673 kB of additional disk space will be used.
@@ -209,3 +211,6 @@ Modules can be enabled or disabled by the following commands:
     .. code-block:: bash
 
         service apache2 reload
+
+.. meta::
+    :labels: apache ubuntu debian

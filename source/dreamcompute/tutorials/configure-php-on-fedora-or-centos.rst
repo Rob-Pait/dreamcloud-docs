@@ -77,3 +77,6 @@ configuration file for all methods of using php.
 
   The php.ini file used for the PHP CLI, apache module and any other php
   methods.
+
+.. meta::
+    :labels: php fedora centos

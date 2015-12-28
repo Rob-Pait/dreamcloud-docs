@@ -13,8 +13,8 @@ DreamObjects. The script is implemented in the `Python programming language
 create a user with an S3 key in your DreamObjects account in the DreamHost
 Panel.
 
-You can download `the example script <https://raw.githubusercontent.com/dreamhost/dreamcloud-docs/master/dreamobjects/tutorials/source/demo/demo.py>`_,
-and then run it using the following command:
+You can download `the example script`_, and then run it using the following
+command:
 
 .. code-block:: sh
 
@@ -182,3 +182,8 @@ Digging Deeper
 
 Now that you've walked through this simple guide, you should be ready to dive
 deeper into DreamObjects! Take a look at the api documentation
+
+.. _the example script: https://raw.githubusercontent.com/dreamhost/dreamcloud-docs/master/dreamobjects/tutorials/source/demo/demo.py
+
+.. meta::
+    :labels: api S3 boto acl bucket

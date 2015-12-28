@@ -85,8 +85,11 @@ installed LAMP stack.
 
 `PHP Configuration Files`_
 
-.. _Apache Directories and Main Configuration Files: https://dreamhosthelp.zendesk.com/hc/en-us/articles/215879457-How-to-Configure-Apache-on-DreamCompute-Running-Debian-or-Ubuntu
+.. _Apache Directories and Main Configuration Files: 215879457-How-to-Configure-Apache-on-DreamCompute-Running-Debian-or-Ubuntu
 
-.. _MySQL Configuration: https://dreamhosthelp.zendesk.com/hc/en-us/articles/215879487-How-to-Configure-MYSQL-on-DreamCompute-running-Debian-or-Ubuntu
+.. _MySQL Configuration: 215879487-How-to-Configure-MYSQL-on-DreamCompute-running-Debian-or-Ubuntu
 
-.. _PHP Configuration Files: https://dreamhosthelp.zendesk.com/hc/en-us/articles/215231198-How-to-Configure-PHP-on-DreamCompute-running-Debian-or-Ubuntu
+.. _PHP Configuration Files: 215231198-How-to-Configure-PHP-on-DreamCompute-running-Debian-or-Ubuntu
+
+.. meta::
+    :labels: php apache mysql nova debia ubuntu

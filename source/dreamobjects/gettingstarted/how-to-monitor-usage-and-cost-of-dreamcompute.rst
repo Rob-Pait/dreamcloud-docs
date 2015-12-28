@@ -46,3 +46,6 @@ the following:
 You can then choose a username and time frame to view the report. If the
 'Monthly Billing' option is selected, the User and Timeframe sections are left
 out.
+
+.. meta::
+    :labels: quota billing

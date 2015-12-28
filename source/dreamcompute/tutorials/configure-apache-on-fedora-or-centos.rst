@@ -164,3 +164,6 @@ front of each line.  You can reload Apache via the command:
 .. code::
 
     service httpd reload
+
+.. meta::
+    :labels: apache fedora centos

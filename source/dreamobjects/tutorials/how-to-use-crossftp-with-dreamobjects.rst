@@ -50,3 +50,6 @@ To set up CrossFTP to use with your DreamObjects account:
 6. Click the **Connect** button to connect to DreamObjects.
 
 CrossFTP will then connect to your DreamObjects bucket.
+
+.. meta::
+    :labels: crossftp desktop client bucket windows

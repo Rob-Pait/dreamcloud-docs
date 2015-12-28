@@ -22,8 +22,8 @@ options. The first thing you want to do is to make sure you have an instance
 running with a floating IP address. This could be any DreamCompute instance
 with a floating IP, but you'd typically use a dedicated jump host or your web
 server in the example above. Ensure you can SSH into that machine with your
-SSH key. If you need instructions for that, check out the `SSH Keys
-<http://wiki.dreamhost.com/SSH_Keys>`_ article.
+SSH key. If you need instructions for that, check out `how to upload
+SSH keys in DreamCompute`_.
 
 Configuring a Jump Host in DreamCompute
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -84,3 +84,8 @@ If you’re looking for more info on jump hosts, proxies, and SSH
 configuration, check out `this wikibook
 <https://en.wikibooks.org/wiki/OpenSSH/Cookbook/Proxies_and_Jump_Hosts>`_
 as a great reference and inspiration for this article.
+
+.. _how to upload SSH keys in DreamCompute: 214843617-How-to-upload-an-SSH-key-via-the-web-UI
+
+.. meta::
+    :labels: ssh nova windows mac linux desktop dashboard

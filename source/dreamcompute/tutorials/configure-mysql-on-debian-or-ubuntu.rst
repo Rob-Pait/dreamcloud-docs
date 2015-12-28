@@ -154,3 +154,6 @@ or just:
 .. code::
 
     mysql -u root -p
+
+.. meta::
+    :labels: mysql debian ubuntu

@@ -173,3 +173,6 @@ development environment and should be less restricted.
   has a memory_limit of 128MB, and disallows all functions related to `POSIX
   PHP functions <http://php.net/manual/en/ref.pcntl.php>`_ for security and
   safety reasons.
+
+.. meta::
+    :labels: php ubuntu debian

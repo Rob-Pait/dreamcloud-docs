@@ -64,7 +64,7 @@ Important: DreamSpeed CDN is a feature of DreamObjects rather than a
 standalone product, therefore you must first set up DreamObjects in the
 panel (i.e.,create a bucket, store files, and so on).
 
-1. Navigate to the (`Panel > ‘Cloud Services’ > ‘DreamObjects’ <https://panel.dreamhost.com/index.cgi?tree=cloud.objects>`_) page.
+1. Navigate to the (`Panel > ‘Cloud Services’ > ‘DreamObjects’`_) page.
     .. figure:: images/01_DreamSpeed_CDN.fw.png
         :alt: DreamObjects
 2. To the right of your bucket, click the ‘Change Settings’ link.
@@ -74,7 +74,10 @@ panel (i.e.,create a bucket, store files, and so on).
 4. At the bottom, toggle the ‘CDN SUPPORT’ option. This enables the checkbox
    titled ‘Use CDN’ to appear at the right of the alias.
 5. Check the ‘Use CDN’ checkbox.
-6. Click the **Save Settings** button to save. *When you return to the DreamObjects page, the green ‘CDN’ icon appears which confirms it’s been configured:*
+6. Click the **Save Settings** button to save. *When you return to the
+   DreamObjects page, the green ‘CDN’ icon appears which confirms it’s
+   been configured:*
+
     .. figure:: images/03_DreamSpeed_CDN.fw.png
         :alt: CDN icon
 
@@ -135,3 +138,8 @@ Using with WordPress
 To utilize DreamSpeed CDN with WordPress, use the following available plugin:
 
 `DreamSpeed CDN WordPress Plugin <https://wordpress.org/plugins/dreamspeed-cdn/>`_
+
+.. _Panel > ‘Cloud Services’ > ‘DreamObjects’: https://panel.dreamhost.com/index.cgi?tree=cloud.objects>
+
+.. meta::
+    :labels: cdn bucket

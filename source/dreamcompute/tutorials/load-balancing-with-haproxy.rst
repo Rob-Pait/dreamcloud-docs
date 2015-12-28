@@ -208,3 +208,6 @@ Next, you'll need to activate HAProxy by setting ENABLED to 1 in
 Assuming that you have configured your DNS to point app1.domain.io and
 app2.domain.io to your floating IP address, you should be able to access your
 applications via HAProxy. Congratulations!
+
+.. meta::
+    :labels: apache haproxy debian ubuntu
