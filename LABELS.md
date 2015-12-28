@@ -36,12 +36,22 @@ chef
 saltstack
 puppet
 
+tools
+~~~~~
+boto
+ssh
+duplicity
+arq
+cloudberry
+s3cmd
+
 Services
 ~~~~~~~~
 apache
 nginx
 irc
 jabber
+dns
 
 Operating Systems
 ~~~~~~~~~~~~~~~~~
@@ -81,6 +91,7 @@ resize
 move
 rename
 authentication
+backup
 
 Product-specific components
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -104,3 +115,4 @@ Other topics
 
 quota
 billing
+CORS

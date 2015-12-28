@@ -241,3 +241,6 @@ Examples
 --------
 
 * `(SCHOCK) Hosting Web fonts on a CDN?  You’re going to need some CORS. <http://schock.net/articles/2013/07/03/hosting-web-fonts-on-a-cdn-youre-going-to-need-some-cors/>`_
+
+.. meta::
+    :labels: CORS

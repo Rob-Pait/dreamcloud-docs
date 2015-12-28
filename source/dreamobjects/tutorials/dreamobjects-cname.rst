@@ -79,3 +79,5 @@ page. Click the 'DNS' link under your domain to view the record:
 
 .. figure:: images/03_DreamObjects_CNAME.PNG
 
+.. meta::
+    :labels: dns bucket

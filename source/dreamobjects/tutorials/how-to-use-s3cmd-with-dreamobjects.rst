@@ -152,3 +152,6 @@ Example Commands
 
     $ s3cmd du -H s3://s3cmd-justin
     40G      s3://s3cmd-justin
+
+.. meta::
+    :labels: linux mac s3cmd

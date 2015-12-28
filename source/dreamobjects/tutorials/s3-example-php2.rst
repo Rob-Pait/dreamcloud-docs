@@ -213,3 +213,6 @@ The output of this will look something like::
 
    http://my-bucket-name.objects.dreamhost.com/hello.txt
    http://my-bucket-name.objects.dreamhost.com/secret_plans.txt?Signature=XXXXXXXXXXXXXXXXXXXXXXXXXXX&Expires=1316027075&AWSAccessKeyId=XXXXXXXXXXXXXXXXXXX
+
+.. meta::
+    :labels: PHP S3

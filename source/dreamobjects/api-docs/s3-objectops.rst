@@ -399,3 +399,6 @@ Syntax
 ::
 
     DELETE /{bucket}/{object}?uploadId= HTTP/1.1
+
+.. meta::
+    :labels: S3 bucket

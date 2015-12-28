@@ -121,3 +121,6 @@ Setting up CloudBerry Backupup with DreamObjects
 
 18. Click the 'Backup Plans' tab to confirm everything is properly configured.
 19. Click the **Run backup now** button if you want to run the backup.
+
+.. meta::
+    :labels: cloudberry backup

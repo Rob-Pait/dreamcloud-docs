@@ -60,3 +60,6 @@ Save and close it. Now you can run the script and it will take a screenshot and 
 it to the bucket you specified. It is a good idea to assign this to a keyboard shortcut.
 How you do this depends on what desktop environment or window manager you
 use. Google for instructions that are specific to what you are using.
+
+.. meta::
+    :labels: python boto

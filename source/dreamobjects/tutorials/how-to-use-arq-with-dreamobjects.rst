@@ -57,3 +57,6 @@ Connecting with Arq
     *Arq is now configured to backup your data:*
 
 .. figure:: images/Arq-7.fw.png
+
+.. meta::
+    :labels: arq windows mac backup

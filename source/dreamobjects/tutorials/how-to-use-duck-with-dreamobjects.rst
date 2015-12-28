@@ -106,3 +106,6 @@ Helpful commands
 
     *Be sure to set the permission to the bucket or file to public or you will
     get a forbidden error.*
+
+.. meta::
+    :labels: duck linux mac windows backup

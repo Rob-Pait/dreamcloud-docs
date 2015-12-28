@@ -235,3 +235,6 @@ DreamObjects daily, but what if you want to do more
 with those backups?  In a future post, I'll talk about
 how to list your available backups and choose one to
 restore from.
+
+.. meta::
+    :labels: python linux boto backup

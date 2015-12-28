@@ -189,3 +189,6 @@ called ``my-new-container``
 .. code-block:: java
 
     blobStore.removeBlob("my-new-container", "goodbye.txt");
+
+.. meta::
+    :labels: java swift

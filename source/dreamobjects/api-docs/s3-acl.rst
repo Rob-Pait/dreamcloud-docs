@@ -22,3 +22,5 @@ object:
 | ``FULL_CONTROL`` | Grantee has full permissions for object in the bucket. | Grantee can read or write to the object ACL. |
 +------------------+--------------------------------------------------------+----------------------------------------------+
 
+.. meta::
+    :labels: S3

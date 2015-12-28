@@ -113,3 +113,6 @@ This deletes the object ``goodbye.txt``
 .. code-block:: ruby
 
 	container.delete_object('goodbye.txt')
+
+.. meta::
+    :labels: ruby swift

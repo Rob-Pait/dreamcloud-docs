@@ -50,3 +50,6 @@ Access Control Lists
 ====================
 
 TBD
+
+.. meta::
+    :labels: swift authentication

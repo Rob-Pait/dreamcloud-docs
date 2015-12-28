@@ -51,3 +51,6 @@ Replace the ``{hash-of-header-and-secret}`` with the base-64 encoded HMAC string
 
 .. _RFC 2104: http://www.ietf.org/rfc/rfc2104.txt
 .. _HMAC: http://en.wikipedia.org/wiki/HMAC
+
+.. meta::
+    :labels: S3 authentication

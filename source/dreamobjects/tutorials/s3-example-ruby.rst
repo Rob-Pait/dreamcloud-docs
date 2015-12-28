@@ -171,3 +171,6 @@ The output of this will look something like::
 
 .. _`AWS::S3`: http://amazon.rubyforge.org/
 .. _`AWS::S3::Bucket`: http://amazon.rubyforge.org/doc/
+
+.. meta::
+    :labels: ruby S3

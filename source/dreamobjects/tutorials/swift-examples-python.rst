@@ -109,3 +109,6 @@ This deletes the object ``goodbye.txt``
 .. code-block:: python
 
 	container.delete_object('goodbye.txt')
+
+.. meta::
+    :labels: python swift

@@ -191,3 +191,5 @@ The output will look something like this::
 .. _`Amazon::S3::Bucket`: http://search.cpan.org/~tima/Amazon-S3-0.441/lib/Amazon/S3/Bucket.pm
 .. _`Muck::FS::S3`: http://search.cpan.org/~mike/Muck-0.02/
 
+.. meta::
+    :labels: perl S3
