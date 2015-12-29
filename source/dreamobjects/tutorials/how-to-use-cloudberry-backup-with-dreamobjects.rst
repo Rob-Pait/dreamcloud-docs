@@ -34,7 +34,7 @@ Setting up CloudBerry Backupup with DreamObjects
 .. figure:: images/04_Cloudberry.fw.png
 
 5. Enter the following  DreamObjects credentials which can be found on the
-   (`Panel > ‘Cloud Services’ > ‘DreamObjects’ 
+   (`Panel > ‘Cloud Services’ > ‘DreamObjects’
    <https://panel.dreamhost.com/index.cgi?tree=cloud.objects>`_) page:
 
     * **Display Name** – Enter any name you wish

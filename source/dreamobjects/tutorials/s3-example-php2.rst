@@ -18,22 +18,22 @@ Create an S3 client object to interact with the DHO server.
 
 .. code-block:: php
 
-	<?php
-	define('AWS_KEY', 'place access key here');
-	define('AWS_SECRET_KEY', 'place secret key here');
-	define('HOST', 'https://objects.dreamhost.com');
+    <?php
+    define('AWS_KEY', 'place access key here');
+    define('AWS_SECRET_KEY', 'place secret key here');
+    define('HOST', 'https://objects.dreamhost.com');
 
-	// require the AWS SDK for PHP library
-	require 'aws-autoloader.php';
+    // require the AWS SDK for PHP library
+    require 'aws-autoloader.php';
 
-	use Aws\S3\S3Client;
+    use Aws\S3\S3Client;
 
-	// Establish connection with DreamObjects with an S3 client.
-	$client = S3Client::factory(array(
-	    'base_url' => HOST,
-	    'key'      => AWS_KEY,
-	    'secret'   => AWS_SECRET_KEY
-	));
+    // Establish connection with DreamObjects with an S3 client.
+    $client = S3Client::factory(array(
+        'base_url' => HOST,
+        'key'      => AWS_KEY,
+        'secret'   => AWS_SECRET_KEY
+    ));
 
 
 Listing Owned Buckets
@@ -43,12 +43,12 @@ List buckets owned by the S3 user.
 
 .. code-block:: php
 
-	<?php
-	$blist = $client->listBuckets();
-	echo "   Buckets belonging to " . $blist['Owner']['ID'] . ":\n";
-	foreach ($blist['Buckets'] as $b) {
-	    echo "{$b['Name']}\t{$b['CreationDate']}\n";
-	}
+    <?php
+    $blist = $client->listBuckets();
+    echo "   Buckets belonging to " . $blist['Owner']['ID'] . ":\n";
+    foreach ($blist['Buckets'] as $b) {
+        echo "{$b['Name']}\t{$b['CreationDate']}\n";
+    }
 
 The output will look something like this::
 
@@ -62,8 +62,8 @@ Creating a Bucket
 
 .. code-block:: php
 
-	<?php
-	$client->createBucket(array('Bucket' => 'my-new-bucket'));
+    <?php
+    $client->createBucket(array('Bucket' => 'my-new-bucket'));
 
 .. note::
    The library is somewhat inconsistent in its validation of
@@ -104,11 +104,11 @@ Deleting a Bucket
 
 .. code-block:: php
 
-	<?php
-	$client->deleteBucket(array('Bucket' => $new_bucket));
+    <?php
+    $client->deleteBucket(array('Bucket' => $new_bucket));
 
-	// optionally, you can wait until the bucket is deleted
-	$client->waitUntilBucketNotExists(array('Bucket' => $new_bucket));
+    // optionally, you can wait until the bucket is deleted
+    $client->waitUntilBucketNotExists(array('Bucket' => $new_bucket));
 
 
 Forced Delete for Non-empty Buckets
@@ -126,12 +126,12 @@ This uploads a file from the filesystem and sets it to be private.
 
 .. code-block:: php
 
-	<?php
-	$key         = 'hello.txt';
-	$source_file = './hello.txt';
-	$acl         = 'private';
-	$bucket      = 'my-bucket-name';
-	$client->upload($bucket, $key, fopen($source_file, 'r'), $acl);
+    <?php
+    $key         = 'hello.txt';
+    $source_file = './hello.txt';
+    $acl         = 'private';
+    $bucket      = 'my-bucket-name';
+    $client->upload($bucket, $key, fopen($source_file, 'r'), $acl);
 
 
 Change an Object's ACL
@@ -142,17 +142,17 @@ publicly readable, and object ``secret_plans.txt`` to be private.
 
 .. code-block:: php
 
-	<?php
-	$client->putObjectAcl(array(
-	    'Bucket' => 'my-bucket-name',
-	    'Key'    => 'hello.txt',
-	    'ACL'    => 'public-read'
-	));
-	$client->putObjectAcl(array(
-	    'Bucket' => 'my-bucket-name',
-	    'Key'    => 'secret_plans.txt',
-	    'ACL'    => 'private'
-	));
+    <?php
+    $client->putObjectAcl(array(
+        'Bucket' => 'my-bucket-name',
+        'Key'    => 'hello.txt',
+        'ACL'    => 'public-read'
+    ));
+    $client->putObjectAcl(array(
+        'Bucket' => 'my-bucket-name',
+        'Key'    => 'secret_plans.txt',
+        'ACL'    => 'private'
+    ));
 
 .. note::
 
@@ -167,11 +167,11 @@ This deletes the object ``goodbye.txt``
 
 .. code-block:: php
 
-	<?php
-	$client->deleteObject(array(
-	    'Bucket' => 'my-bucket-name',
-	    'Key'    => 'goodbye.txt',
-	));
+    <?php
+    $client->deleteObject(array(
+        'Bucket' => 'my-bucket-name',
+        'Key'    => 'goodbye.txt',
+    ));
 
 
 Download an Object (to a file)
@@ -182,12 +182,12 @@ in ``/home/larry/documents``
 
 .. code-block:: php
 
-	<?php
-	$client->getObject(array(
-	    'Bucket' => 'my-bucket-name',
-	    'Key'    => 'poetry.pdf',
-	    'SaveAs' => '/home/larry/documents/poetry.pdf'
-	));
+    <?php
+    $client->getObject(array(
+        'Bucket' => 'my-bucket-name',
+        'Key'    => 'poetry.pdf',
+        'SaveAs' => '/home/larry/documents/poetry.pdf'
+    ));
 
 
 Generate Object Download URLs (signed and unsigned)
@@ -203,11 +203,11 @@ the URL will stop working).
 
 .. code-block:: php
 
-	<?php
-	$plain_url = $client->getObjectUrl('my-bucket-name', 'hello.txt');
-	echo $plain_url . "\n";
-	$signed_url = $client->getObjectUrl('my-bucket-name', 'secret_plans.txt', '+1 hour');
-	echo $signed_url . "\n";
+    <?php
+    $plain_url = $client->getObjectUrl('my-bucket-name', 'hello.txt');
+    echo $plain_url . "\n";
+    $signed_url = $client->getObjectUrl('my-bucket-name', 'secret_plans.txt', '+1 hour');
+    echo $signed_url . "\n";
 
 The output of this will look something like::
 

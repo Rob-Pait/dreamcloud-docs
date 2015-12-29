@@ -5,8 +5,8 @@ AWS SDK for PHP S3 Examples
 
 .. note::
 
-	This library can be obtained from `github <https://github.com/amazonwebservices/aws-sdk-for-php.git>`_
-	and these examples have been tested against version 1.6.2
+    This library can be obtained from `github <https://github.com/amazonwebservices/aws-sdk-for-php.git>`_
+    and these examples have been tested against version 1.6.2
 
 
 Creating a Connection
@@ -16,25 +16,25 @@ This creates a connection so that you can interact with the server.
 
 .. code-block:: php
 
-	<?php
-	define('AWS_KEY', 'place access key here');
-	define('AWS_SECRET_KEY', 'place secret key here');
-	define('AWS_CANONICAL_ID', 'your DHO Username');
-	define('AWS_CANONICAL_NAME', 'Also your DHO Username!');
-	$HOST = 'objects.dreamhost.com';
+    <?php
+    define('AWS_KEY', 'place access key here');
+    define('AWS_SECRET_KEY', 'place secret key here');
+    define('AWS_CANONICAL_ID', 'your DHO Username');
+    define('AWS_CANONICAL_NAME', 'Also your DHO Username!');
+    $HOST = 'objects.dreamhost.com';
 
-	// require the amazon sdk for php library
-	require_once 'AWSSDKforPHP/sdk.class.php';
+    // require the amazon sdk for php library
+    require_once 'AWSSDKforPHP/sdk.class.php';
 
-	// Instantiate the S3 class and point it at the desired host
-	$Connection = new AmazonS3(array(
-		'key'            => AWS_KEY,
-		'secret'         => AWS_SECRET_KEY,
-		'canonical_id'   => AWS_CANONICAL_ID,
-		'canonical_name' => AWS_CANONICAL_NAME,
+    // Instantiate the S3 class and point it at the desired host
+    $Connection = new AmazonS3(array(
+            'key'            => AWS_KEY,
+            'secret'         => AWS_SECRET_KEY,
+            'canonical_id'   => AWS_CANONICAL_ID,
+            'canonical_name' => AWS_CANONICAL_NAME,
     ));
-	$Connection->set_hostname($HOST);
-	$Connection->allow_hostname_override(false);
+    $Connection->set_hostname($HOST);
+    $Connection->allow_hostname_override(false);
 
 
 Listing Owned Buckets
@@ -45,12 +45,12 @@ bucket.
 
 .. code-block:: php
 
-	<?php
-	$ListResponse = $Connection->list_buckets();
-	$Buckets = $ListResponse->body->Buckets->Bucket;
-	foreach ($Buckets as $Bucket) {
-		echo $Bucket->Name . "\t" . $Bucket->CreationDate . "\n";
-	}
+    <?php
+    $ListResponse = $Connection->list_buckets();
+    $Buckets = $ListResponse->body->Buckets->Bucket;
+    foreach ($Buckets as $Bucket) {
+            echo $Bucket->Name . "\t" . $Bucket->CreationDate . "\n";
+    }
 
 The output will look something like this::
 
@@ -74,8 +74,8 @@ This creates a new bucket called ``my-new-bucket`` and returns a
 
 .. code-block:: php
 
-	<?php
-	$Connection->create_bucket('my-new-bucket', '');
+    <?php
+    $Connection->create_bucket('my-new-bucket', '');
 
 
 List a Bucket's Content
@@ -87,12 +87,12 @@ and last modified date.
 
 .. code-block:: php
 
-	<?php
-	$ObjectsListResponse = $Connection->list_objects($bucketname);
-	$Objects = $ObjectsListResponse->body->Contents;
-	foreach ($Objects as $Object) {
-		echo $Object->Key . "\t" . $Object->Size . "\t" . $Object->LastModified . "\n";
-	}
+    <?php
+    $ObjectsListResponse = $Connection->list_objects($bucketname);
+    $Objects = $ObjectsListResponse->body->Contents;
+    foreach ($Objects as $Object) {
+            echo $Object->Key . "\t" . $Object->Size . "\t" . $Object->LastModified . "\n";
+    }
 
 .. note::
 
@@ -119,8 +119,8 @@ This deletes the bucket called ``my-old-bucket`` and returns a
 
 .. code-block:: php
 
-	<?php
-	$Connection->delete_bucket('my-old-bucket');
+    <?php
+    $Connection->delete_bucket('my-old-bucket');
 
 
 Forced Delte for Non-empty Buckets
@@ -130,8 +130,8 @@ This will delete the bucket even if it is not empty.
 
 .. code-block:: php
 
-	<?php
-	$Connection->delete_bucket('my-old-bucket', 1);
+    <?php
+    $Connection->delete_bucket('my-old-bucket', 1);
 
 
 Creating an Object
@@ -141,19 +141,19 @@ This creates an object ``hello.txt`` with the string ``"Hello World!"``
 
 .. code-block:: php
 
-	<?php
-	$Connection->create_object('my-bucket-name', 'hello.txt', array(
-		'body' => "Hello World!",
-	));
+    <?php
+    $Connection->create_object('my-bucket-name', 'hello.txt', array(
+            'body' => "Hello World!",
+    ));
 
 .. note::
 
-	If you use the ``fileUpload`` option instad of the ``body`` option to
-	specify	your object's contents, you'll currently receive an error because
-	the invocation of cURL to perform the upload in this library's code is
-	incorrect and results in a slightly malformed set of request headers.  See
-	`this thread <https://discussion.dreamhost.com/thread-136035.html>`_ on
-	our forums for more information.
+    If you use the ``fileUpload`` option instad of the ``body`` option to
+    specify	your object's contents, you'll currently receive an error because
+    the invocation of cURL to perform the upload in this library's code is
+    incorrect and results in a slightly malformed set of request headers.  See
+    `this thread <https://discussion.dreamhost.com/thread-136035.html>`_ on
+    our forums for more information.
 
 
 Change an Object's ACL
@@ -164,9 +164,9 @@ This makes the object ``hello.txt`` to be publicly readable and
 
 .. code-block:: php
 
-	<?php
-	$Connection->set_object_acl('my-bucket-name', 'hello.txt', AmazonS3::ACL_PUBLIC);
-	$Connection->set_object_acl('my-bucket-name', 'secret_plans.txt', AmazonS3::ACL_PRIVATE);
+    <?php
+    $Connection->set_object_acl('my-bucket-name', 'hello.txt', AmazonS3::ACL_PUBLIC);
+    $Connection->set_object_acl('my-bucket-name', 'secret_plans.txt', AmazonS3::ACL_PRIVATE);
 
 
 Delete an Object
@@ -176,8 +176,8 @@ This deletes the object ``goodbye.txt``
 
 .. code-block:: php
 
-	<?php
-	$Connection->delete_object('my-bucket-name', 'goodbye.txt');
+    <?php
+    $Connection->delete_object('my-bucket-name', 'goodbye.txt');
 
 
 Download an Object (to a file)
@@ -188,11 +188,11 @@ This downloads the object ``poetry.pdf`` and saves it in
 
 .. code-block:: php
 
-	<?php
-	$FileHandle = fopen('/home/larry/documents/poetry.pdf', 'w+');
-	$Connection->get_object('my-bucket-name', 'poetry.pdf', array(
-		'fileDownload' => $FileHandle,
-	));
+    <?php
+    $FileHandle = fopen('/home/larry/documents/poetry.pdf', 'w+');
+    $Connection->get_object('my-bucket-name', 'poetry.pdf', array(
+            'fileDownload' => $FileHandle,
+    ));
 
 
 Generate Object Download URLs (signed and unsigned)
@@ -208,11 +208,11 @@ the URL will stop working).
 
 .. code-block:: php
 
-	<?php
-	my $plain_url = $Connection->get_object_url('my-bucket-name', 'hello.txt');
-	echo $plain_url . "\n";
-	my $secret_url = $Connection->get_object_url('my-bucket-name', 'secret_plans.txt', '1 hour');
-	echo $secret_url . "\n";
+    <?php
+    my $plain_url = $Connection->get_object_url('my-bucket-name', 'hello.txt');
+    echo $plain_url . "\n";
+    my $secret_url = $Connection->get_object_url('my-bucket-name', 'secret_plans.txt', '1 hour');
+    echo $secret_url . "\n";
 
 The output of this will look something like::
 

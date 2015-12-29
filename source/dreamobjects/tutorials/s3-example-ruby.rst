@@ -8,12 +8,12 @@ This creates a connection so that you can interact with the server.
 
 .. code-block:: ruby
 
-	AWS::S3::Base.establish_connection!(
-		:server            => 'objects.dreamhost.com',
-		:use_ssl           => true,
-		:access_key_id     => 'my-access-key',
-		:secret_access_key => 'my-secret-key'
-	)
+    AWS::S3::Base.establish_connection!(
+            :server            => 'objects.dreamhost.com',
+            :use_ssl           => true,
+            :access_key_id     => 'my-access-key',
+            :secret_access_key => 'my-secret-key'
+    )
 
 
 Listing Owned Buckets
@@ -24,9 +24,9 @@ This also prints out the bucket name and creation date of each bucket.
 
 .. code-block:: ruby
 
-	AWS::S3::Service.buckets.each do |bucket|
-		puts "#{bucket.name}\t#{bucket.creation_date}"
-	end
+    AWS::S3::Service.buckets.each do |bucket|
+            puts "#{bucket.name}\t#{bucket.creation_date}"
+    end
 
 The output will look something like this::
 
@@ -42,7 +42,7 @@ This creates a new bucket called ``my-new-bucket``
 
 .. code-block:: ruby
 
-	AWS::S3::Bucket.create('my-new-bucket')
+    AWS::S3::Bucket.create('my-new-bucket')
 
 
 Listing a Bucket's Content
@@ -54,10 +54,10 @@ modified date.
 
 .. code-block:: ruby
 
-	new_bucket = AWS::S3::Bucket.find('my-new-bucket')
-	new_bucket.each do |object|
-		puts "#{object.key}\t#{object.about['content-length']}\t#{object.about['last-modified']}"
-	end
+    new_bucket = AWS::S3::Bucket.find('my-new-bucket')
+    new_bucket.each do |object|
+            puts "#{object.key}\t#{object.about['content-length']}\t#{object.about['last-modified']}"
+    end
 
 The output will look something like this if the bucket has some files::
 
@@ -72,7 +72,7 @@ Deleting a Bucket
 
 .. code-block:: ruby
 
-	AWS::S3::Bucket.delete('my-new-bucket')
+    AWS::S3::Bucket.delete('my-new-bucket')
 
 
 Forced Delete for Non-empty Buckets
@@ -80,7 +80,7 @@ Forced Delete for Non-empty Buckets
 
 .. code-block:: ruby
 
-	AWS::S3::Bucket.delete('my-new-bucket', :force => true)
+    AWS::S3::Bucket.delete('my-new-bucket', :force => true)
 
 
 Creating an Object
@@ -90,12 +90,12 @@ This creates a file ``hello.txt`` with the string ``"Hello World!"``
 
 .. code-block:: ruby
 
-	AWS::S3::S3Object.store(
-		'hello.txt',
-		'Hello World!',
-		'my-new-bucket',
-		:content_type => 'text/plain'
-	)
+    AWS::S3::S3Object.store(
+            'hello.txt',
+            'Hello World!',
+            'my-new-bucket',
+            :content_type => 'text/plain'
+    )
 
 
 Change an Object's ACL
@@ -106,13 +106,13 @@ to be private.
 
 .. code-block:: ruby
 
-	policy = AWS::S3::S3Object.acl('hello.txt', 'my-new-bucket')
-	policy.grants = [ AWS::S3::ACL::Grant.grant(:public_read) ]
-	AWS::S3::S3Object.acl('hello.txt', 'my-new-bucket', policy)
+    policy = AWS::S3::S3Object.acl('hello.txt', 'my-new-bucket')
+    policy.grants = [ AWS::S3::ACL::Grant.grant(:public_read) ]
+    AWS::S3::S3Object.acl('hello.txt', 'my-new-bucket', policy)
 
-	policy = AWS::S3::S3Object.acl('secret_plans.txt', 'my-new-bucket')
-	policy.grants = []
-	AWS::S3::S3Object.acl('secret_plans.txt', 'my-new-bucket', policy)
+    policy = AWS::S3::S3Object.acl('secret_plans.txt', 'my-new-bucket')
+    policy.grants = []
+    AWS::S3::S3Object.acl('secret_plans.txt', 'my-new-bucket', policy)
 
 
 Download an Object (to a file)
@@ -123,11 +123,11 @@ This downloads the object ``poetry.pdf`` and saves it in
 
 .. code-block:: ruby
 
-	open('/home/larry/documents/poetry.pdf', 'w') do |file|
-		AWS::S3::S3Object.stream('poetry.pdf', 'my-new-bucket') do |chunk|
-			file.write(chunk)
-		end
-	end
+    open('/home/larry/documents/poetry.pdf', 'w') do |file|
+            AWS::S3::S3Object.stream('poetry.pdf', 'my-new-bucket') do |chunk|
+                    file.write(chunk)
+            end
+    end
 
 
 Delete an Object
@@ -137,7 +137,7 @@ This deletes the object ``goodbye.txt``
 
 .. code-block:: ruby
 
-	AWS::S3::S3Object.delete('goodbye.txt', 'my-new-bucket')
+    AWS::S3::S3Object.delete('goodbye.txt', 'my-new-bucket')
 
 
 Generate Object Download URLs (signed and unsigned)
@@ -152,17 +152,17 @@ URL will stop working).
 
 .. code-block:: ruby
 
-	puts AWS::S3::S3Object.url_for(
-		'hello.txt',
-		'my-new-bucket',
-		:authenticated => false
-	)
+    puts AWS::S3::S3Object.url_for(
+            'hello.txt',
+            'my-new-bucket',
+            :authenticated => false
+    )
 
-	puts AWS::S3::S3Object.url_for(
-		'secret_plans.txt',
-		'my-new-bucket',
-		:expires_in => 60 * 60
-	)
+    puts AWS::S3::S3Object.url_for(
+            'secret_plans.txt',
+            'my-new-bucket',
+            :expires_in => 60 * 60
+    )
 
 The output of this will look something like::
 
@@ -173,4 +173,4 @@ The output of this will look something like::
 .. _`AWS::S3::Bucket`: http://amazon.rubyforge.org/doc/
 
 .. meta::
-    :labels: ruby S3
+    :labels: ruby S3 api

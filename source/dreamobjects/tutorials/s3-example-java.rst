@@ -11,21 +11,21 @@ classes to be imported:
 
 .. code-block:: java
 
-	import java.io.ByteArrayInputStream;
-	import java.io.File;
-	import java.util.List;
-	import com.amazonaws.auth.AWSCredentials;
-	import com.amazonaws.auth.BasicAWSCredentials;
-	import com.amazonaws.util.StringUtils;
-	import com.amazonaws.services.s3.AmazonS3;
-	import com.amazonaws.services.s3.AmazonS3Client;
-	import com.amazonaws.services.s3.model.Bucket;
-	import com.amazonaws.services.s3.model.CannedAccessControlList;
-	import com.amazonaws.services.s3.model.GeneratePresignedUrlRequest;
-	import com.amazonaws.services.s3.model.GetObjectRequest;
-	import com.amazonaws.services.s3.model.ObjectListing;
-	import com.amazonaws.services.s3.model.ObjectMetadata;
-	import com.amazonaws.services.s3.model.S3ObjectSummary;
+    import java.io.ByteArrayInputStream;
+    import java.io.File;
+    import java.util.List;
+    import com.amazonaws.auth.AWSCredentials;
+    import com.amazonaws.auth.BasicAWSCredentials;
+    import com.amazonaws.util.StringUtils;
+    import com.amazonaws.services.s3.AmazonS3;
+    import com.amazonaws.services.s3.AmazonS3Client;
+    import com.amazonaws.services.s3.model.Bucket;
+    import com.amazonaws.services.s3.model.CannedAccessControlList;
+    import com.amazonaws.services.s3.model.GeneratePresignedUrlRequest;
+    import com.amazonaws.services.s3.model.GetObjectRequest;
+    import com.amazonaws.services.s3.model.ObjectListing;
+    import com.amazonaws.services.s3.model.ObjectMetadata;
+    import com.amazonaws.services.s3.model.S3ObjectSummary;
 
 
 Creating a Connection
@@ -35,12 +35,12 @@ This creates a connection so that you can interact with the server.
 
 .. code-block:: java
 
-	String accessKey = "insert your access key here!";
-	String secretKey = "insert your secret key here!";
+    String accessKey = "insert your access key here!";
+    String secretKey = "insert your secret key here!";
 
-	AWSCredentials credentials = new BasicAWSCredentials(accessKey, secretKey);
-	AmazonS3 conn = new AmazonS3Client(credentials);
-	conn.setEndpoint("objects.dreamhost.com");
+    AWSCredentials credentials = new BasicAWSCredentials(accessKey, secretKey);
+    AmazonS3 conn = new AmazonS3Client(credentials);
+    conn.setEndpoint("objects.dreamhost.com");
 
 
 Listing Owned Buckets
@@ -51,11 +51,11 @@ This also prints out the bucket name and creation date of each bucket.
 
 .. code-block:: java
 
-	List<Bucket> buckets = conn.listBuckets();
-	for (Bucket bucket : buckets) {
-		System.out.println(bucket.getName() + "\t" +
-			StringUtils.fromDate(bucket.getCreationDate()));
-	}
+    List<Bucket> buckets = conn.listBuckets();
+    for (Bucket bucket : buckets) {
+            System.out.println(bucket.getName() + "\t" +
+                    StringUtils.fromDate(bucket.getCreationDate()));
+    }
 
 The output will look something like this::
 
@@ -71,7 +71,7 @@ This creates a new bucket called ``my-new-bucket``
 
 .. code-block:: java
 
-	Bucket bucket = conn.createBucket("my-new-bucket");
+    Bucket bucket = conn.createBucket("my-new-bucket");
 
 
 Listing a Bucket's Content
@@ -82,15 +82,15 @@ modified date.
 
 .. code-block:: java
 
-	ObjectListing objects = conn.listObjects(bucket.getName());
-	do {
-		for (S3ObjectSummary objectSummary : objects.getObjectSummaries()) {
-			System.out.println(objectSummary.getKey() + "\t" +
-				ObjectSummary.getSize() + "\t" +
-				StringUtils.fromDate(objectSummary.getLastModified()));
-		}
-		objects = conn.listNextBatchOfObjects(objects);
-	} while (objects.isTruncated());
+    ObjectListing objects = conn.listObjects(bucket.getName());
+    do {
+            for (S3ObjectSummary objectSummary : objects.getObjectSummaries()) {
+                    System.out.println(objectSummary.getKey() + "\t" +
+                            ObjectSummary.getSize() + "\t" +
+                            StringUtils.fromDate(objectSummary.getLastModified()));
+            }
+            objects = conn.listNextBatchOfObjects(objects);
+    } while (objects.isTruncated());
 
 The output will look something like this::
 
@@ -106,7 +106,7 @@ Deleting a Bucket
 
 .. code-block:: java
 
-	conn.deleteBucket(bucket.getName());
+    conn.deleteBucket(bucket.getName());
 
 
 Forced Delete for Non-empty Buckets
@@ -122,8 +122,8 @@ This creates a file ``hello.txt`` with the string ``"Hello World!"``
 
 .. code-block:: java
 
-	ByteArrayInputStream input = new ByteArrayInputStream("Hello World!".getBytes());
-	conn.putObject(bucket.getName(), "hello.txt", input, new ObjectMetadata());
+    ByteArrayInputStream input = new ByteArrayInputStream("Hello World!".getBytes());
+    conn.putObject(bucket.getName(), "hello.txt", input, new ObjectMetadata());
 
 
 Change an Object's ACL
@@ -134,8 +134,8 @@ This makes the object ``hello.txt`` to be publicly readable, and
 
 .. code-block:: java
 
-	conn.setObjectAcl(bucket.getName(), "hello.txt", CannedAccessControlList.PublicRead);
-	conn.setObjectAcl(bucket.getName(), "secret_plans.txt", CannedAccessControlList.Private);
+    conn.setObjectAcl(bucket.getName(), "hello.txt", CannedAccessControlList.PublicRead);
+    conn.setObjectAcl(bucket.getName(), "secret_plans.txt", CannedAccessControlList.Private);
 
 
 Download an Object (to a file)
@@ -146,10 +146,10 @@ This downloads the object ``perl_poetry.pdf`` and saves it in
 
 .. code-block:: java
 
-	conn.getObject(
-		new GetObjectRequest(bucket.getName(), "perl_poetry.pdf"),
-		new File("/home/larry/documents/perl_poetry.pdf")
-	);
+    conn.getObject(
+            new GetObjectRequest(bucket.getName(), "perl_poetry.pdf"),
+            new File("/home/larry/documents/perl_poetry.pdf")
+    );
 
 
 Delete an Object
@@ -159,7 +159,7 @@ This deletes the object ``goodbye.txt``
 
 .. code-block:: java
 
-	conn.deleteObject(bucket.getName(), "goodbye.txt");
+    conn.deleteObject(bucket.getName(), "goodbye.txt");
 
 
 Generate Object Download URLs (signed and unsigned)
@@ -178,12 +178,12 @@ URL will stop working).
 
 .. code-block:: java
 
-	GeneratePresignedUrlRequest request = new GeneratePresignedUrlRequest(bucket.getName(), "secret_plans.txt");
-	System.out.println(conn.generatePresignedUrl(request));
+    GeneratePresignedUrlRequest request = new GeneratePresignedUrlRequest(bucket.getName(), "secret_plans.txt");
+    System.out.println(conn.generatePresignedUrl(request));
 
 The output will look something like this::
 
    https://my-bucket-name.objects.dreamhost.com/secret_plans.txt?Signature=XXXXXXXXXXXXXXXXXXXXXXXXXXX&Expires=1316027075&AWSAccessKeyId=XXXXXXXXXXXXXXXXXXX
 
 .. meta::
-    :labels: java S3
+    :labels: java S3 api

@@ -8,15 +8,15 @@ This creates a connection so that you can interact with the server.
 
 .. code-block:: ruby
 
-	require 'cloudfiles'
-	username = 'account_name:user_name'
-	api_key  = 'your_secret_key'
+    require 'cloudfiles'
+    username = 'account_name:user_name'
+    api_key  = 'your_secret_key'
 
-	conn = CloudFiles::Connection.new(
-		:username => username,
-		:api_key  => api_key,
-		:auth_url => 'http://objects.dreamhost.com/auth'
-	)
+    conn = CloudFiles::Connection.new(
+            :username => username,
+            :api_key  => api_key,
+            :auth_url => 'http://objects.dreamhost.com/auth'
+    )
 
 
 Listing Owned Containers
@@ -27,9 +27,9 @@ This also prints out the container name.
 
 .. code-block:: ruby
 
-	conn.containers.each do |container|
-		puts container
-	end
+    conn.containers.each do |container|
+            puts container
+    end
 
 The output will look something like this::
 
@@ -45,7 +45,7 @@ This creates a new container called ``my-new-container``
 
 .. code-block:: ruby
 
-	container = conn.create_container('my-new-container')
+    container = conn.create_container('my-new-container')
 
 
 Listing a Container's Content
@@ -57,11 +57,11 @@ modified date.
 
 .. code-block:: ruby
 
-	require 'date'  # not necessary in the next version
+    require 'date'  # not necessary in the next version
 
-	container.objects_detail.each do |name, data|
-		puts "#{name}\t#{data[:bytes]}\t#{data[:last_modified]}"
-	end
+    container.objects_detail.each do |name, data|
+            puts "#{name}\t#{data[:bytes]}\t#{data[:last_modified]}"
+    end
 
 The output will look something like this::
 
@@ -78,7 +78,7 @@ Deleting a Container
 
 .. code-block:: ruby
 
-	container.delete_container('my-new-container')
+    container.delete_container('my-new-container')
 
 
 Creating an Object
@@ -88,9 +88,9 @@ This creates a file ``hello.txt`` from the file named ``my_hello.txt``
 
 .. code-block:: ruby
 
-	obj = container.create_object('hello.txt')
-	obj.load_from_filename('./my_hello.txt')
-	obj.content_type = 'text/plain'
+    obj = container.create_object('hello.txt')
+    obj.load_from_filename('./my_hello.txt')
+    obj.content_type = 'text/plain'
 
 
 Download an Object (to a file)
@@ -101,8 +101,8 @@ This downloads the object ``hello.txt`` and saves it in
 
 .. code-block:: ruby
 
-	obj = container.object('hello.txt')
-	obj.save_to_filename('./my_hello.txt')
+    obj = container.object('hello.txt')
+    obj.save_to_filename('./my_hello.txt')
 
 
 Delete an Object
@@ -112,7 +112,7 @@ This deletes the object ``goodbye.txt``
 
 .. code-block:: ruby
 
-	container.delete_object('goodbye.txt')
+    container.delete_object('goodbye.txt')
 
 .. meta::
     :labels: ruby swift

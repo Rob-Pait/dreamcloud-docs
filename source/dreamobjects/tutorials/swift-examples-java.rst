@@ -30,8 +30,8 @@ A sample pom.xml file:
     </project>
 
 
-Our examples will require some or all of the following java classes 
-to be imported:
+Our examples will require some or all of the following java classes to
+be imported:
 
 .. code-block:: java
 

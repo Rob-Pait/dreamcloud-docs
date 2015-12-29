@@ -8,17 +8,17 @@ This creates a connection so that you can interact with the server.
 
 .. code-block:: python
 
-	import boto
-	import boto.s3.connection
-	access_key = 'put your access key here!'
-	secret_key = 'put your secret key here!'
+    import boto
+    import boto.s3.connection
+    access_key = 'put your access key here!'
+    secret_key = 'put your secret key here!'
 
-	conn = boto.connect_s3(
-		aws_access_key_id = access_key,
-		aws_secret_access_key = secret_key,
-		host = 'objects.dreamhost.com',
-		calling_format = boto.s3.connection.OrdinaryCallingFormat(),
-		)
+    conn = boto.connect_s3(
+            aws_access_key_id = access_key,
+            aws_secret_access_key = secret_key,
+            host = 'objects.dreamhost.com',
+            calling_format = boto.s3.connection.OrdinaryCallingFormat(),
+            )
 
 
 Listing Owned Buckets
@@ -29,11 +29,11 @@ This also prints out the bucket name and creation date of each bucket.
 
 .. code-block:: python
 
-	for bucket in conn.get_all_buckets():
-	print "{name}\t{created}".format(
-		name = bucket.name,
-		created = bucket.creation_date,
-		)
+    for bucket in conn.get_all_buckets():
+    print "{name}\t{created}".format(
+            name = bucket.name,
+            created = bucket.creation_date,
+            )
 
 The output will look something like this::
 
@@ -49,7 +49,7 @@ This creates a new bucket called ``my-new-bucket``
 
 .. code-block:: python
 
-	bucket = conn.create_bucket('my-new-bucket')
+    bucket = conn.create_bucket('my-new-bucket')
 
 
 Listing a Bucket's Content
@@ -61,12 +61,12 @@ modified date.
 
 .. code-block:: python
 
-	for key in bucket.list():
-		print "{name}\t{size}\t{modified}".format(
-			name = key.name,
-			size = key.size,
-			modified = key.last_modified,
-			)
+    for key in bucket.list():
+            print "{name}\t{size}\t{modified}".format(
+                    name = key.name,
+                    size = key.size,
+                    modified = key.last_modified,
+                    )
 
 The output will look something like this::
 
@@ -83,7 +83,7 @@ Deleting a Bucket
 
 .. code-block:: python
 
-	conn.delete_bucket(bucket.name)
+    conn.delete_bucket(bucket.name)
 
 
 Forced Delete for Non-empty Buckets
@@ -101,8 +101,8 @@ This creates a file ``hello.txt`` with the string ``"Hello World!"``
 
 .. code-block:: python
 
-	key = bucket.new_key('hello.txt')
-	key.set_contents_from_string('Hello World!')
+    key = bucket.new_key('hello.txt')
+    key.set_contents_from_string('Hello World!')
 
 
 Change an Object's ACL
@@ -113,10 +113,10 @@ This makes the object ``hello.txt`` to be publicly readable, and
 
 .. code-block:: python
 
-	hello_key = bucket.get_key('hello.txt')
-	hello_key.set_canned_acl('public-read')
-	plans_key = bucket.get_key('secret_plans.txt')
-	plans_key.set_canned_acl('private')
+    hello_key = bucket.get_key('hello.txt')
+    hello_key.set_canned_acl('public-read')
+    plans_key = bucket.get_key('secret_plans.txt')
+    plans_key.set_canned_acl('private')
 
 
 Download an Object (to a file)
@@ -127,8 +127,8 @@ This downloads the object ``perl_poetry.pdf`` and saves it in
 
 .. code-block:: python
 
-	key = bucket.get_key('perl_poetry.pdf')
-	key.get_contents_to_filename('/home/larry/documents/perl_poetry.pdf')
+    key = bucket.get_key('perl_poetry.pdf')
+    key.get_contents_to_filename('/home/larry/documents/perl_poetry.pdf')
 
 
 Delete an Object
@@ -138,7 +138,7 @@ This deletes the object ``goodbye.txt``
 
 .. code-block:: python
 
-	bucket.delete_key('goodbye.txt')
+    bucket.delete_key('goodbye.txt')
 
 
 Generate Object Download URLs (signed and unsigned)
@@ -153,13 +153,13 @@ URL will stop working).
 
 .. code-block:: python
 
-	hello_key = bucket.get_key('hello.txt')
-	hello_url = hello_key.generate_url(0, query_auth=False, force_http=True)
-	print hello_url
+    hello_key = bucket.get_key('hello.txt')
+    hello_url = hello_key.generate_url(0, query_auth=False, force_http=True)
+    print hello_url
 
-	plans_key = bucket.get_key('secret_plans.txt')
-	plans_url = plans_key.generate_url(3600, query_auth=True, force_http=True)
-	print plans_url
+    plans_key = bucket.get_key('secret_plans.txt')
+    plans_url = plans_key.generate_url(3600, query_auth=True, force_http=True)
+    print plans_url
 
 The output of this will look something like::
 

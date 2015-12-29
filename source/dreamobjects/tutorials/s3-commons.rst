@@ -7,14 +7,14 @@ Bucket and Host Name
 There are two different modes of accessing the buckets. The first (preferred)
 method identifies the bucket as the top-level directory in the URI. ::
 
-	GET /mybucket HTTP/1.1
-	Host: objects.dreamhost.com
+    GET /mybucket HTTP/1.1
+    Host: objects.dreamhost.com
 
 The second method identifies the bucket via a virtual bucket host name. For
 example::
 
-	GET / HTTP/1.1
-	Host: mybucket.objects.dreamhost.com
+    GET / HTTP/1.1
+    Host: mybucket.objects.dreamhost.com
 
 .. tip::
 
@@ -108,4 +108,4 @@ Common Response Status
 +---------------+-----------------------------------+
 
 .. meta::
-    :labels: S3
+    :labels: S3 api

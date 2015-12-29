@@ -6,7 +6,7 @@ Overview
 ~~~~~~~~
 
 The Usage Report tab in the panel provides billing and storage details relating
-to your current DreamObjects service plan. 
+to your current DreamObjects service plan.
 
 Viewing usage reports
 ~~~~~~~~~~~~~~~~~~~~~
