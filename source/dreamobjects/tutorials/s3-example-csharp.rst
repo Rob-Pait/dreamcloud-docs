@@ -8,22 +8,22 @@ This creates a connection so that you can interact with the server.
 
 .. code-block:: csharp
 
-	using System;
-	using Amazon;
-	using Amazon.S3;
-	using Amazon.S3.Model;
+    using System;
+    using Amazon;
+    using Amazon.S3;
+    using Amazon.S3.Model;
 
-	string accessKey = "put your access key here!";
-	string secretKey = "put your secret key here!";
+    string accessKey = "put your access key here!";
+    string secretKey = "put your secret key here!";
 
-	AmazonS3Config config = new AmazonS3Config();
-	config.ServiceURL = "objects.dreamhost.com";
+    AmazonS3Config config = new AmazonS3Config();
+    config.ServiceURL = "objects.dreamhost.com";
 
-	AmazonS3 client = Amazon.AWSClientFactory.CreateAmazonS3Client(
-		accessKey,
-		secretKey,
-		config
-		);
+    AmazonS3 client = Amazon.AWSClientFactory.CreateAmazonS3Client(
+            accessKey,
+            secretKey,
+            config
+            );
 
 
 Listing Owned Buckets
@@ -34,11 +34,11 @@ This also prints out the bucket name and creation date of each bucket.
 
 .. code-block:: csharp
 
-	ListBucketResponse response = client.ListBuckets();
-	foreach (S3Bucket b in response.Buckets)
-	{
-		Console.WriteLine("{0}\t{1}", b.BucketName, b.CreationDate);
-	}
+    ListBucketResponse response = client.ListBuckets();
+    foreach (S3Bucket b in response.Buckets)
+    {
+            Console.WriteLine("{0}\t{1}", b.BucketName, b.CreationDate);
+    }
 
 The output will look something like this::
 
@@ -53,9 +53,9 @@ This creates a new bucket called ``my-new-bucket``
 
 .. code-block:: csharp
 
-	PutBucketRequest request = new PutBucketRequest();
-	request.BucketName = "my-new-bucket";
-	client.PutBucket(request);
+    PutBucketRequest request = new PutBucketRequest();
+    request.BucketName = "my-new-bucket";
+    client.PutBucket(request);
 
 Listing a Bucket's Content
 --------------------------
@@ -66,13 +66,13 @@ modified date.
 
 .. code-block:: csharp
 
-	ListObjectsRequest request = new ListObjectsRequest();
-	request.BucketName = "my-new-bucket";
-	ListObjectsResponse response = client.ListObjects(request);
-	foreach (S3Object o in response.S3Objects)
-	{
-		Console.WriteLine("{0}\t{1}\t{2}", o.Key, o.Size, o.LastModified);
-	}
+    ListObjectsRequest request = new ListObjectsRequest();
+    request.BucketName = "my-new-bucket";
+    ListObjectsResponse response = client.ListObjects(request);
+    foreach (S3Object o in response.S3Objects)
+    {
+            Console.WriteLine("{0}\t{1}\t{2}", o.Key, o.Size, o.LastModified);
+    }
 
 The output will look something like this::
 
@@ -89,9 +89,9 @@ Deleting a Bucket
 
 .. code-block:: csharp
 
-	DeleteBucketRequest request = new DeleteBucketRequest();
-	request.BucketName = "my-new-bucket";
-	client.DeleteBucket(request);
+    DeleteBucketRequest request = new DeleteBucketRequest();
+    request.BucketName = "my-new-bucket";
+    client.DeleteBucket(request);
 
 
 Forced Delete for Non-empty Buckets
@@ -109,12 +109,12 @@ This creates a file ``hello.txt`` with the string ``"Hello World!"``
 
 .. code-block:: csharp
 
-	PutObjectRequest request = new PutObjectRequest();
-	request.Bucket      = "my-new-bucket";
-	request.Key         = "hello.txt";
-	request.ContentType = "text/plain";
-	request.ContentBody = "Hello World!";
-	client.PutObject(request);
+    PutObjectRequest request = new PutObjectRequest();
+    request.Bucket      = "my-new-bucket";
+    request.Key         = "hello.txt";
+    request.ContentType = "text/plain";
+    request.ContentBody = "Hello World!";
+    client.PutObject(request);
 
 
 Change an Object's ACL
@@ -125,17 +125,17 @@ This makes the object ``hello.txt`` to be publicly readable, and
 
 .. code-block:: csharp
 
-	SetACLRequest request = new SetACLRequest();
-	request.BucketName = "my-new-bucket";
-	request.Key        = "hello.txt";
-	request.CannedACL  = S3CannedACL.PublicRead;
-	client.SetACL(request);
+    SetACLRequest request = new SetACLRequest();
+    request.BucketName = "my-new-bucket";
+    request.Key        = "hello.txt";
+    request.CannedACL  = S3CannedACL.PublicRead;
+    client.SetACL(request);
 
-	SetACLRequest request2 = new SetACLRequest();
-	request2.BucketName = "my-new-bucket";
-	request2.Key        = "secret_plans.txt";
-	request2.CannedACL  = S3CannedACL.Private;
-	client.SetACL(request2);
+    SetACLRequest request2 = new SetACLRequest();
+    request2.BucketName = "my-new-bucket";
+    request2.Key        = "secret_plans.txt";
+    request2.CannedACL  = S3CannedACL.Private;
+    client.SetACL(request2);
 
 
 Download an Object (to a file)
@@ -146,11 +146,11 @@ This downloads the object ``perl_poetry.pdf`` and saves it in
 
 .. code-block:: csharp
 
-	GetObjectRequest request = new GetObjectRequest();
-	request.BucketName = "my-new-bucket";
-	request.Key        = "perl_poetry.pdf"
-	GetObjectResponse response = client.GetObject(request);
-	response.WriteResponseStreamToFile("C:\\Users\\larry\\Documents\\perl_poetry.pdf");
+    GetObjectRequest request = new GetObjectRequest();
+    request.BucketName = "my-new-bucket";
+    request.Key        = "perl_poetry.pdf"
+    GetObjectResponse response = client.GetObject(request);
+    response.WriteResponseStreamToFile("C:\\Users\\larry\\Documents\\perl_poetry.pdf");
 
 
 Delete an Object
@@ -160,10 +160,10 @@ This deletes the object ``goodbye.txt``
 
 .. code-block:: csharp
 
-	DeleteObjectRequest request = new DeleteObjectRequest();
-	request.BucketName = "my-new-bucket";
-	request.Key        = "goodbye.txt";
-	client.DeleteObject(request);
+    DeleteObjectRequest request = new DeleteObjectRequest();
+    request.BucketName = "my-new-bucket";
+    request.Key        = "goodbye.txt";
+    client.DeleteObject(request);
 
 
 Generate Object Download URLs (signed and unsigned)
@@ -183,13 +183,13 @@ URL will stop working).
 
 .. code-block:: csharp
 
-	GetPreSignedUrlRequest request = new GetPreSignedUrlRequest();
-	request.BucketName = "my-bucket-name";
-	request.Key        = "secret_plans.txt";
-	request.Expires    = DateTime.Now.AddHours(1);
-	request.Protocol   = Protocol.HTTP;
-	string url = client.GetPreSignedURL(request);
-	Console.WriteLine(url);
+    GetPreSignedUrlRequest request = new GetPreSignedUrlRequest();
+    request.BucketName = "my-bucket-name";
+    request.Key        = "secret_plans.txt";
+    request.Expires    = DateTime.Now.AddHours(1);
+    request.Protocol   = Protocol.HTTP;
+    string url = client.GetPreSignedURL(request);
+    Console.WriteLine(url);
 
 The output of this will look something like::
 

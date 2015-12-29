@@ -11,17 +11,17 @@ This creates a connection so that you can interact with the server.
 
 .. code-block:: perl
 
-	use Amazon::S3;
-	my $access_key = 'put your access key here!';
-	my $secret_key = 'put your secret key here!';
+    use Amazon::S3;
+    my $access_key = 'put your access key here!';
+    my $secret_key = 'put your secret key here!';
 
-	my $conn = Amazon::S3->new({
-		aws_access_key_id     => $access_key,
-		aws_secret_access_key => $secret_key,
-		host                  => 'objects.dreamhost.com',
-		secure                => 1,
-		retry                 => 1,
-	});
+    my $conn = Amazon::S3->new({
+            aws_access_key_id     => $access_key,
+            aws_secret_access_key => $secret_key,
+            host                  => 'objects.dreamhost.com',
+            secure                => 1,
+            retry                 => 1,
+    });
 
 
 Listing Owned Buckets
@@ -32,10 +32,10 @@ We'll also print out the bucket name and creation date of each bucket.
 
 .. code-block:: perl
 
-	my @buckets = @{$conn->buckets->{buckets} || []};
-	foreach my $bucket (@buckets) {
-		print $bucket->bucket . "\t" . $bucket->creation_date . "\n";
-	}
+    my @buckets = @{$conn->buckets->{buckets} || []};
+    foreach my $bucket (@buckets) {
+            print $bucket->bucket . "\t" . $bucket->creation_date . "\n";
+    }
 
 The output will look something like this::
 
@@ -51,7 +51,7 @@ This creates a new bucket called ``my-new-bucket``
 
 .. code-block:: perl
 
-	my $bucket = $conn->add_bucket({ bucket => 'my-new-bucket' });
+    my $bucket = $conn->add_bucket({ bucket => 'my-new-bucket' });
 
 
 Listing a Bucket's Content
@@ -63,10 +63,10 @@ modified date.
 
 .. code-block:: perl
 
-	my @keys = @{$bucket->list_all->{keys} || []};
-	foreach my $key (@keys) {
-		print "$key->{key}\t$key->{size}\t$key->{last_modified}\n";
-	}
+    my @keys = @{$bucket->list_all->{keys} || []};
+    foreach my $key (@keys) {
+            print "$key->{key}\t$key->{size}\t$key->{last_modified}\n";
+    }
 
 The output will look something like this::
 
@@ -82,7 +82,7 @@ Deleting a Bucket
 
 .. code-block:: perl
 
-	$conn->delete_bucket($bucket);
+    $conn->delete_bucket($bucket);
 
 
 Forced Delete for Non-empty Buckets
@@ -100,11 +100,10 @@ This creates a file ``hello.txt`` with the string ``"Hello World!"``
 
 .. code-block:: perl
 
-	$bucket->add_key(
-		'hello.txt', 'Hello World!',
-		{ content_type => 'text/plain' },
-	);
-
+    $bucket->add_key(
+            'hello.txt', 'Hello World!',
+            { content_type => 'text/plain' },
+    );
 
 Change an Object's ACL
 ----------------------
@@ -114,14 +113,14 @@ This makes the object ``hello.txt`` to be publicly readable and
 
 .. code-block:: perl
 
-	$bucket->set_acl({
-		key       => 'hello.txt',
-		acl_short => 'public-read',
-	});
-	$bucket->set_acl({
-		key       => 'secret_plans.txt',
-		acl_short => 'private',
-	});
+    $bucket->set_acl({
+            key       => 'hello.txt',
+            acl_short => 'public-read',
+    });
+    $bucket->set_acl({
+            key       => 'secret_plans.txt',
+            acl_short => 'private',
+    });
 
 
 Download an Object (to a file)
@@ -132,8 +131,8 @@ This downloads the object ``perl_poetry.pdf`` and saves it in
 
 .. code-block:: perl
 
-	$bucket->get_key_filename('perl_poetry.pdf', undef,
-		'/home/larry/documents/perl_poetry.pdf');
+    $bucket->get_key_filename('perl_poetry.pdf', undef,
+            '/home/larry/documents/perl_poetry.pdf');
 
 
 Delete an Object
@@ -143,7 +142,7 @@ This deletes the object ``goodbye.txt``
 
 .. code-block:: perl
 
-	$bucket->delete_key('goodbye.txt');
+    $bucket->delete_key('goodbye.txt');
 
 Generate Object Download URLs (signed and unsigned)
 ---------------------------------------------------
@@ -166,20 +165,20 @@ URL will stop working).
 
 .. code-block:: perl
 
-	use Muck::FS::S3::QueryStringAuthGenerator;
-	my $generator = Muck::FS::S3::QueryStringAuthGenerator->new(
-		$access_key,
-		$secret_key,
-		0, # 0 means use 'http'. set this to 1 for 'https'
-		'objects.dreamhost.com',
-	);
+    use Muck::FS::S3::QueryStringAuthGenerator;
+    my $generator = Muck::FS::S3::QueryStringAuthGenerator->new(
+            $access_key,
+            $secret_key,
+            0, # 0 means use 'http'. set this to 1 for 'https'
+            'objects.dreamhost.com',
+    );
 
-	my $hello_url = $generator->make_bare_url($bucket->bucket, 'hello.txt');
-	print $hello_url . "\n";
+    my $hello_url = $generator->make_bare_url($bucket->bucket, 'hello.txt');
+    print $hello_url . "\n";
 
-	$generator->expires_in(3600); # 1 hour = 3600 seconds
-	my $plans_url = $generator->get($bucket->bucket, 'secret_plans.txt');
-	print $plans_url . "\n";
+    $generator->expires_in(3600); # 1 hour = 3600 seconds
+    my $plans_url = $generator->get($bucket->bucket, 'secret_plans.txt');
+    print $plans_url . "\n";
 
 The output will look something like this::
 

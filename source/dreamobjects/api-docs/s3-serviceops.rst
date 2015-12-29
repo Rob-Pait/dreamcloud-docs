@@ -3,17 +3,19 @@ Understand DreamObjects S3-compatible Service Operations
 
 List Buckets
 ------------
-``GET /`` returns a list of buckets created by the user making the request. ``GET /`` only
-returns buckets created by an authenticated user. You cannot make an anonymous request.
+
+``GET /`` returns a list of buckets created by the user making the
+request. ``GET /`` only returns buckets created by an authenticated
+user. You cannot make an anonymous request.
 
 Syntax
 ~~~~~~
 ::
 
-	GET / HTTP/1.1
-	Host: objects.dreamhost.com
+    GET / HTTP/1.1
+    Host: objects.dreamhost.com
 
-	Authorization: AWS {access-key}:{hash-of-header-and-secret}
+    Authorization: AWS {access-key}:{hash-of-header-and-secret}
 
 Response Entities
 ~~~~~~~~~~~~~~~~~

@@ -33,9 +33,9 @@ Adding a DreamObjects CNAME record
 You can create, delete and modify your DreamObjects CNAME records within the
 panel using the built in interface. The interface includes:
 
-    * A section for permissions
-    * A link to the bucket
-    * A section for setting up aliases as subdomains of domains on the Account
+* A section for permissions
+* A link to the bucket
+* A section for setting up aliases as subdomains of domains on the Account
 
 1. Navigate to the `(Panel > Cloud Services’ > ‘DreamObjects’
    <https://panel.dreamhost.com/index.cgi?tree=cloud.objects&>`_) page.
