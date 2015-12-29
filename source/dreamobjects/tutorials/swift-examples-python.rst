@@ -8,15 +8,15 @@ This creates a connection so that you can interact with the server.
 
 .. code-block:: python
 
-	import cloudfiles
-	username = 'account_name:username'
-	api_key = 'your_api_key'
+    import cloudfiles
+    username = 'account_name:username'
+    api_key = 'your_api_key'
 
-	conn = cloudfiles.get_connection(
-		username=username,
-		api_key=api_key,
-		authurl='https://objects.dreamhost.com/auth',
-		)
+    conn = cloudfiles.get_connection(
+            username=username,
+            api_key=api_key,
+            authurl='https://objects.dreamhost.com/auth',
+            )
 
 
 Listing Owned Containers
@@ -27,8 +27,8 @@ This also prints out the container name.
 
 .. code-block:: python
 
-	for container in conn.get_all_containers():
-		print container.name
+    for container in conn.get_all_containers():
+            print container.name
 
 The output will look something like this::
 
@@ -44,7 +44,7 @@ This creates a new container called ``my-new-container``
 
 .. code-block:: python
 
-	container = conn.create_container('my-new-container')
+    container = conn.create_container('my-new-container')
 
 
 Listing a Container's Content
@@ -56,8 +56,8 @@ modified date.
 
 .. code-block:: python
 
-	for obj in container.get_objects():
-		print "{0}\t{1}\t{2}".format(obj.name, obj.size, obj.last_modified)
+    for obj in container.get_objects():
+            print "{0}\t{1}\t{2}".format(obj.name, obj.size, obj.last_modified)
 
 The output will look something like this::
 
@@ -74,7 +74,7 @@ Deleting a Container
 
 .. code-block:: python
 
-	conn.delete_container(container.name)
+    conn.delete_container(container.name)
 
 
 Creating an Object
@@ -84,9 +84,9 @@ This creates a file ``hello.txt`` from the file named ``my_hello.txt``
 
 .. code-block:: python
 
-	obj = container.create_object('hello.txt')
-	obj.content_type = 'text/plain'
-	obj.load_from_filename('./my_hello.txt')
+    obj = container.create_object('hello.txt')
+    obj.content_type = 'text/plain'
+    obj.load_from_filename('./my_hello.txt')
 
 
 Download an Object (to a file)
@@ -97,8 +97,8 @@ This downloads the object ``hello.txt`` and saves it in
 
 .. code-block:: python
 
-	obj = container.get_object('hello.txt')
-	obj.save_to_filename('./my_hello.txt')
+    obj = container.get_object('hello.txt')
+    obj.save_to_filename('./my_hello.txt')
 
 
 Delete an Object
@@ -108,7 +108,7 @@ This deletes the object ``goodbye.txt``
 
 .. code-block:: python
 
-	container.delete_object('goodbye.txt')
+    container.delete_object('goodbye.txt')
 
 .. meta::
     :labels: python swift
