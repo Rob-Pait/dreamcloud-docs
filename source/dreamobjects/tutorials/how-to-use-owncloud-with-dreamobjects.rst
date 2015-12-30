@@ -28,8 +28,8 @@ You also must enable DreamObjects on your DreamHost account. If you haven't
 enabled DreamObjects nor created the required keys and buckets, please review
 the following articles:
 
-* [[DreamObjects_End_User_Guide#Creating_a_User|Creating a DreamObjects User]]
-* [[DreamObjects_End_User_Guide#Keys|Creating DreamObjects Keys]]
+* `Creating a DreamObjects User`_
+* `Creating DreamObjects Keys`_
 
 Configuring ownCloud
 ~~~~~~~~~~~~~~~~~~~~
@@ -98,8 +98,7 @@ access key, secret key, and bucket name.
 
 To locate and copy your access keys, please see:
 
-* [[DreamObjects_End_User_Guide#Copying_Your_Access_Keys|Copying your access
-  keys]]
+* `Copying your access keys`_
 
     .. figure:: images/12_owncloud_with_DreamObjects.fw.png
 
@@ -188,3 +187,9 @@ You may also find that you need to adjust the PHP memory limit. The steps for
 adjusting the PHP memory limit are outlined here:
 
 * [[PHP.ini#Increasing_the_PHP_Memory_Limit|Increasing the PHP Memory Limit]]
+
+.. _Creating DreamObjects Keys: 215986357-What-are-Keys-in-DreamObjects-and-How-Do-You-Use-Them-
+
+.. _Creating a DreamObjects User: 215986327-What-are-Users-in-DreamObjects-and-How-Do-You-Use-Them-
+
+.. _Copying your access keys: 215986357-What-are-Keys-in-DreamObjects-and-How-Do-You-Use-Them-

@@ -32,7 +32,7 @@ Setting up ShareX with DreamObjects
 
     .. figure:: images/03_ShareX.fw.png
 
-6. Enter the [[DreamObjects_End_User_Guide#Keys|Access key and Secret key]] in
+6. Enter the `Access key and Secret key`_ in
    the selected fields
 
     .. figure:: images/04_ShareX.fw.png
@@ -42,3 +42,5 @@ Setting up ShareX with DreamObjects
 8. Select the 'Image uploader' > 'File uploader' > 'Amazon S3' option as shown
    in the above screenshot.
 9. Repeat the previous step to enable Text and File uploads.
+
+.. _Access key and Secret key: 215986357-What-are-Keys-in-DreamObjects-and-How-Do-You-Use-Them-

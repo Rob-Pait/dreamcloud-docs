@@ -4,6 +4,10 @@ build/html/dreamobjects/gettingstarted/:
     - what-is-dreamobjects.html
     - account-management.html
     - uploading-files-using-the-control-panel.html
+    - what-are-users.html
+    - what-are-objects.html
+    - what-are-keys.html
+    - what-are-buckets.html
 
 build/html/dreamobjects/tutorials/:
   section_id: 203167018
@@ -32,6 +36,13 @@ build/html/dreamobjects/tutorials/:
     - swift-protocolsinteroperability.html
     - uploading-screenshots-to-dreamobjects.html
     - what-is-dreamspeed.html
+    - how-to-use-arq-with-dreamobjects.html
+    - how-to-use-duplicati-with-dreamobjects.html
+    - how-to-use-expandrive-with-dreamobjects.html
+    - how-to-use-owncloud-with-dreamobjects.html
+    - how-to-use-sharex-with-dreamobjects.html
+    - how-to-use-transmit-for-ios-with-dreamobjects.html
+    - how-to-use-transmit-with-dreamobjects.html
 
 build/html/dreamobjects/api-docs/:
   section_id: 203167028

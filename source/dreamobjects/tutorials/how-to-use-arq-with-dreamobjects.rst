@@ -29,7 +29,7 @@ Connecting with Arq
    DreamObjects page in the DreamHost panel. Visit the following article for
    further information:
 
-    * DreamObjects_End_User_Guide
+    * `DreamObjects Keys`_
 
 .. figure:: images/Arq-3.fw.png
 
@@ -57,6 +57,8 @@ Connecting with Arq
     *Arq is now configured to backup your data:*
 
 .. figure:: images/Arq-7.fw.png
+
+.. _DreamObjects Keys: 215986357-What-are-Keys-in-DreamObjects-and-How-Do-You-Use-Them-
 
 .. meta::
     :labels: arq windows mac backup

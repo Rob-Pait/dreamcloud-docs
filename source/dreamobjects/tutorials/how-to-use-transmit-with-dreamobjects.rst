@@ -21,8 +21,7 @@ For more information, please visit the Transmit website:
 Using Transmit with DreamObjects
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Before you begin, make sure you already have a
-[[DreamObjects_End_User_Guide#Buckets|DreamObjects bucket]] created.
+Before you begin, make sure you already have a `DreamObjects bucket`_ created.
 
 DreamObjects connectivity is available in version 4.4+ of Transmit. Download
 the latest release from `Panic's site <http://panic.com/transmit/>`_ or from
@@ -43,7 +42,7 @@ the `Mac App Store
 
 .. note::
 
-    Visit the [[DreamObjects_End_User_Guide#Keys|DreamObjects user guide]] for
+    Visit the `DreamObjects keys guide`_ for
     instructions on how to find your access and secret keys.
 
 4. Click the plus (**+**) button on the lower-left to save it as a favorite
@@ -57,3 +56,7 @@ the `Mac App Store
     within them appear on the right side:*
 
 .. figure:: images/Transmit-3.fw.png
+
+.. _DreamObjects bucket: 215321178-What-are-Buckets-in-DreamObjects-and-How-Do-You-Use-Them-
+
+.. _DreamObjects keys guide: 215986357-What-are-Keys-in-DreamObjects-and-How-Do-You-Use-Them-

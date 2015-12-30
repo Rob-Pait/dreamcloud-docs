@@ -5,11 +5,22 @@ How to Use iFiles with DreamObjects
 Overview
 ~~~~~~~~
 
-`iFiles <http://www.ifilesapp.com>`_ bills itself as the most intuitive file manager for iOS with features like connectivity to many file cloud services, transferring files between computer or cloud services, ability to view many file formats (PDF viewer now supports annotations, search and more), voice recorder, web downloader, text file editor and more."
+`iFiles <http://www.ifilesapp.com>`_ bills itself as the most intuitive file
+manager for iOS with features like connectivity to many file cloud services,
+transferring files between computer or cloud services, ability to view many
+file formats (PDF viewer now supports annotations, search and more), voice
+recorder, web downloader, text file editor and more."
 
-.. note:: Don't try to type in your access key and secret key by hand!  Log into the panel from your computer and email the access and secret keys to yourself so you can copy/paste them.  If you don't have access to a computer, log into the panel from your iPhone or iPad and copy the access and secret keys to the Notes app. View the following article for information on your access and secret keys: 
+.. note::
 
-    * [[DreamObjects_End_User_Guide#Keys|DreamObjects Keys]]}}
+    Don't try to type in your access key and secret key by hand!  Log into the
+    panel from your computer and email the access and secret keys to yourself
+    so you can copy/paste them.  If you don't have access to a computer, log
+    into the panel from your iPhone or iPad and copy the access and secret
+    keys to the Notes app. View the following article for information on your
+    access and secret keys:
+
+    * `DreamObjects Keys`_
 
 Connecting to DreamObjects
 ~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -42,3 +53,5 @@ Connecting to DreamObjects
 8. Tap 'DreamObjects' to access the stored files in DreamObjects.
 
 *You can now access your files stored in DreamObjects from the iFiles Dashboard.*
+
+.. _DreamObjects Keys: 215986357-What-are-Keys-in-DreamObjects-and-How-Do-You-Use-Them-

@@ -22,7 +22,7 @@ Using Transmit for iOS with DreamObjects
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Before you begin, make sure you already have a
-[[DreamObjects_End_User_Guide#Buckets|DreamObjects bucket]] created.
+`DreamObjects bucket`_ created.
 
 1. Launch the Transmit app.
 
@@ -41,8 +41,8 @@ Before you begin, make sure you already have a
 
 .. note::
 
-    Visit the [[DreamObjects_End_User_Guide#Keys|DreamObjects user
-    guide]] for instructions on how to find your access and secret keys.
+    Visit the `DreamObjects key guide`_ for instructions on how to find your
+    access and secret keys.
 
 5. Connect to DreamObjects.
     *Your buckets diplay when you connect to DreamObjects:*
@@ -52,3 +52,7 @@ Before you begin, make sure you already have a
     *The contents display when you tap a bucket:*
 
     .. figure:: images/05-Transmit-ios-contents.png
+
+.. _DreamObjects bucket: 215321178-What-are-Buckets-in-DreamObjects-and-How-Do-You-Use-Them-
+
+.. _DreamObjects key guide: 215986357-What-are-Keys-in-DreamObjects-and-How-Do-You-Use-Them-

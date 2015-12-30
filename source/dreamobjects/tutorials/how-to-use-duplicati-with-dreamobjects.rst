@@ -55,9 +55,8 @@ Setting up Duplicati with DreamObjects
 
 8. Enter the following required DreamObjects credentials:
     * **S3 Servername** – objects.dreamhost.com
-    * **AWS Access ID and Secret Key** – Visit the
-      [[DreamObjects_End_User_Guide#Keys|DreamObjects keys]] article for
-      further details
+    * **AWS Access ID and Secret Key** – Visit the `DreamObjects keys`_
+      article for further details
     * **S3 Bucket name** – The name of your DreamObjects bucket
 
 9. Click the **Next** button.
@@ -70,3 +69,5 @@ Setting up Duplicati with DreamObjects
     .. figure:: images/08_Duplicati.fw.png
 
 10. Click the **Finish** button to save.
+
+.. _DreamObjects keys: 215986357-What-are-Keys-in-DreamObjects-and-How-Do-You-Use-Them-

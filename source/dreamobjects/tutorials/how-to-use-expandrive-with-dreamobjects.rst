@@ -1,12 +1,15 @@
+=======================================
+How to Use ExpanDrive with DreamObjects
+=======================================
+
 Overview
 ~~~~~~~~
 
 `ExpanDrive <https://www.expandrive.com/expandrive>`_ is an app that allows
 you to connect to DreamObjects just like a USB drive. It is available for both
 Mac and Windows and allows you to access DreamObjects from any application on
-your computer. Before you begin, you'll need to create a
-[[DreamObjects_End_User_Guide#Buckets|bucket]] on the `(Panel > 'Cloud
-Services' > DreamObjects'
+your computer. Before you begin, you'll need to create a `bucket`_ on the
+`(Panel > 'Cloud Services' > DreamObjects'
 <https://panel.dreamhost.com/index.cgi?tree=cloud.objects&>`_) page.
 
 |mac32| Mac version
@@ -23,7 +26,7 @@ Services' > DreamObjects'
     .. figure:: images/02_Expandrive_MAC.png
 
 4. Enter your DreamObjects Access and Secret keys. Visit the
-   [[DreamObjects_End_User_Guide#Keys|DreamObjects Keys]] article for details.
+   `DreamObjects keys`_ article for details.
 5. Click the **Connect** button.
 
     .. figure:: images/03_Expandrive_MAC.png
@@ -53,8 +56,8 @@ Services' > DreamObjects'
 
     .. figure:: images/02_Expandrive.png
 
-4. Enter your DreamObjects Access and Secret keys. Visit the
-   [[DreamObjects_End_User_Guide#Keys|DreamObjects Keys]] article for details.
+4. Enter your DreamObjects Access and Secret keys. Visit the `DreamObjects
+   Keys`_ article for details.
 5. Click the **Save** button.
 
     .. figure:: images/03_Expandrive.png
@@ -71,3 +74,7 @@ Services' > DreamObjects'
 .. |mac32| image:: images/mac32.png
 
 .. |windows32| image:: images/windows32.png
+
+.. _DreamObjects keys: 215986357-What-are-Keys-in-DreamObjects-and-How-Do-You-Use-Them-
+
+.. _bucket: 215321178-What-are-Buckets-in-DreamObjects-and-How-Do-You-Use-Them-
