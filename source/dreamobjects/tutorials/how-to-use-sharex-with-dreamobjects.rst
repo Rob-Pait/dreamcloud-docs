@@ -44,3 +44,6 @@ Setting up ShareX with DreamObjects
 9. Repeat the previous step to enable Text and File uploads.
 
 .. _Access key and Secret key: 215986357-What-are-Keys-in-DreamObjects-and-How-Do-You-Use-Them-
+
+.. meta::
+    :labels: sharex

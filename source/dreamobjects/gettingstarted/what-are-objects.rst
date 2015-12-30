@@ -91,3 +91,6 @@ Deleting an Object
     .. figure:: images/25_DHO_End_User_Guide_-.fw.png
 
 3. Click the **Remove** button on the popup box to delete the object.
+
+.. meta::
+    :labels: object

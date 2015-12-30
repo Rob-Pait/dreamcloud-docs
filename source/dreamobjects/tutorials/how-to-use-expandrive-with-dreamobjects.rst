@@ -78,3 +78,6 @@ your computer. Before you begin, you'll need to create a `bucket`_ on the
 .. _DreamObjects keys: 215986357-What-are-Keys-in-DreamObjects-and-How-Do-You-Use-Them-
 
 .. _bucket: 215321178-What-are-Buckets-in-DreamObjects-and-How-Do-You-Use-Them-
+
+.. meta::
+    :labels: expandrive

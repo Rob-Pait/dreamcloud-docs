@@ -233,3 +233,6 @@ Migrated and migrating Buckets reflect one of the following five states:
   migration is complete.
 * **Complete** – the Bucket or Container and all of its objects have been
   successfully copied to DreamObjects.
+
+.. meta::
+    :labels: bucket

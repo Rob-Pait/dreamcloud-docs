@@ -183,3 +183,6 @@ memory usage.
 .. _Creating a DreamObjects User: 215986327-What-are-Users-in-DreamObjects-and-How-Do-You-Use-Them-
 
 .. _Copying your access keys: 215986357-What-are-Keys-in-DreamObjects-and-How-Do-You-Use-Them-
+
+.. meta::
+    :labels: owncloud

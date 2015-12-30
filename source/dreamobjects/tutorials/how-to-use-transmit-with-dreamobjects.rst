@@ -60,3 +60,6 @@ the `Mac App Store
 .. _DreamObjects bucket: 215321178-What-are-Buckets-in-DreamObjects-and-How-Do-You-Use-Them-
 
 .. _DreamObjects keys guide: 215986357-What-are-Keys-in-DreamObjects-and-How-Do-You-Use-Them-
+
+.. meta::
+    :labels: transmit

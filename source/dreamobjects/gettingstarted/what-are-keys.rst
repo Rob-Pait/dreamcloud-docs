@@ -77,3 +77,6 @@ Deleting a Key Pair
 
 3. Click the **Remove** button.
     *The Key Pair is deleted.*
+
+.. meta::
+    :labels: key

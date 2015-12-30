@@ -80,6 +80,13 @@ chrome
 safari
 desktop
 mobile
+transmit
+transmit-for-ios
+expandrive
+owncloud
+sharex
+duplicati
+cyberduck
 
 Actions
 ~~~~~~~
@@ -109,6 +116,7 @@ neutron
 network
 dashboard
 horizon
+key
 
 Other topics
 ~~~~~~~~~~~~

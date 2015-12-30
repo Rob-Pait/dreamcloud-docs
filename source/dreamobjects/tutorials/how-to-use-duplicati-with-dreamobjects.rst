@@ -71,3 +71,6 @@ Setting up Duplicati with DreamObjects
 10. Click the **Finish** button to save.
 
 .. _DreamObjects keys: 215986357-What-are-Keys-in-DreamObjects-and-How-Do-You-Use-Them-
+
+.. meta::
+    :labels: duplicati

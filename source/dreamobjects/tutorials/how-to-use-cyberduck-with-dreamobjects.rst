@@ -112,3 +112,6 @@ DreamObjects, simply click and drag files and folders to and from Cyberduck.
     *When uploading or downloading files, a transfer window appears:*
 
     .. figure:: images/10_DHO_Cyberduck.fw.png
+
+.. meta::
+    :labels: cyberduck
