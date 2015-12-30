@@ -178,16 +178,6 @@ is configured to use the latest PHP version. You’ll also need to create custom
 PHP settings to set the desired upload size, execution time, and increased PHP
 memory usage.
 
-You can find the steps in the following article:
-
-* [[PHP.ini#Increasing_the_Filesize_Upload_Limit|Increasing the filesize
-  upload limit]]
-
-You may also find that you need to adjust the PHP memory limit. The steps for
-adjusting the PHP memory limit are outlined here:
-
-* [[PHP.ini#Increasing_the_PHP_Memory_Limit|Increasing the PHP Memory Limit]]
-
 .. _Creating DreamObjects Keys: 215986357-What-are-Keys-in-DreamObjects-and-How-Do-You-Use-Them-
 
 .. _Creating a DreamObjects User: 215986327-What-are-Users-in-DreamObjects-and-How-Do-You-Use-Them-
