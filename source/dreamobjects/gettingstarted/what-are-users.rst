@@ -75,3 +75,6 @@ Deleting a User
    **Remove** on the confirmation dialog box.
 
     *The user is deleted.*
+
+.. meta::
+    :labels: authentication
